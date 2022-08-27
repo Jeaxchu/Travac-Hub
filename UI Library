@@ -1,0 +1,452 @@
+-- Window
+
+local Library = {}
+
+function Library:Window(text, description, Canva, vis) 
+	local suckmysausage = Instance.new("ScreenGui")
+	local yousuckmysausage = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local UIGradient = Instance.new("UIGradient")
+	local UICorner_2 = Instance.new("UICorner")
+	local Tab1 = Instance.new("Frame")
+	local UICorner_3 = Instance.new("UICorner")
+	local playerinfo = Instance.new("Frame")
+	local UICorner_23 = Instance.new("UICorner")
+	local username = Instance.new("TextLabel")
+	local coolguy = Instance.new("ImageLabel")
+	local UICorner_24 = Instance.new("UICorner")
+	local username_2 = Instance.new("TextLabel")
+	local RainbowLines = Instance.new("Frame")
+	local UICorner_25 = Instance.new("UICorner")
+	local left = Instance.new("ScrollingFrame")
+	local UIListLayout_3 = Instance.new("UIListLayout")
+
+	suckmysausage.Parent = game.CoreGui
+
+	suckmysausage.Name = "suckmysausage;)"
+	suckmysausage.Parent = game.CoreGui
+	suckmysausage.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	suckmysausage.ResetOnSpawn = false
+
+	yousuckmysausage.Name = "*yousuckmysausage*"
+	yousuckmysausage.Parent = suckmysausage
+	yousuckmysausage.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+	yousuckmysausage.Position = UDim2.new(0.303297043, 0, 0.0868167207, 0)
+	yousuckmysausage.Size = UDim2.new(0, 584, 0, 359)
+	yousuckmysausage.Visible = vis
+
+	UICorner.CornerRadius = UDim.new(0, 2)
+	UICorner.Parent = yousuckmysausage
+
+	Title.Name = "Title"
+	Title.Parent = yousuckmysausage
+	Title.Active = true
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BorderSizePixel = 0
+	Title.Size = UDim2.new(0, 584, 0, 23)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = text
+	Title.TextColor3 = Color3.fromRGB(0, 0, 255)
+	Title.TextSize = 16.000
+	Title.TextXAlignment = Enum.TextXAlignment.Left
+
+	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(138, 224, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 131, 253))}
+	UIGradient.Parent = Title
+
+	UICorner_2.CornerRadius = UDim.new(0, 2)
+	UICorner_2.Parent = Title
+
+	Tab1.Name = "Tab1"
+	Tab1.Parent = yousuckmysausage
+	Tab1.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+	Tab1.Position = UDim2.new(0.301369876, 0, 0.0640668496, 0)
+	Tab1.Size = UDim2.new(0, 407, 0, 334)
+	Tab1.BorderSizePixel = 0
+
+	left.Name = "left"
+	left.Parent = yousuckmysausage
+	left.Active = true
+	left.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	left.BackgroundTransparency = 1.000
+	left.Position = UDim2.new(-0.000507459277, 0, 0.297839671, 0)
+	left.Size = UDim2.new(0, 173, 0, 252)
+	left.CanvasSize = UDim2.new(0, 0, Canva, 0)
+	left.ScrollBarThickness = 2
+	left.BorderSizePixel = 0
+
+	UIListLayout_3.Parent = left
+	UIListLayout_3.HorizontalAlignment = Enum.HorizontalAlignment.Center
+	UIListLayout_3.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout_3.Padding = UDim.new(0, 5)
+
+	playerinfo.Name = "playerinfo"
+	playerinfo.Parent = yousuckmysausage
+	playerinfo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	playerinfo.BackgroundTransparency = 1.000
+	playerinfo.Position = UDim2.new(-0.00149746425, 0, 0.0638436079, 0)
+	playerinfo.Size = UDim2.new(0, 174, 0, 73)
+
+	UICorner_23.CornerRadius = UDim.new(0, 2)
+	UICorner_23.Parent = playerinfo
+
+	username.Name = "username"
+	username.Parent = playerinfo
+	username.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	username.BackgroundTransparency = 1.000
+	username.Position = UDim2.new(0.3354913, 0, 0.1369863, 0)
+	username.Size = UDim2.new(0, 98, 0, 22)
+	username.Font = Enum.Font.GothamMedium
+	username.Text = "username"
+	username.TextColor3 = Color3.fromRGB(255, 255, 255)
+	username.TextScaled = true
+	username.TextSize = 17.000
+	username.TextWrapped = true
+
+	coolguy.Name = "coolguy"
+	coolguy.Parent = playerinfo
+	coolguy.BackgroundColor3 = Color3.fromRGB(40, 42, 52)
+	coolguy.BorderSizePixel = 0
+	coolguy.Position = UDim2.new(0.0603444763, 0, 0.232876718, 0)
+	coolguy.Size = UDim2.new(0, 39, 0, 36)
+	coolguy.Image = "rbxassetid://0"
+
+	UICorner_24.CornerRadius = UDim.new(0, 40)
+	UICorner_24.Parent = coolguy
+
+	username_2.Name = "username"
+	username_2.Parent = playerinfo
+	username_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	username_2.BackgroundTransparency = 1.000
+	username_2.Position = UDim2.new(0.3354913, 0, 0.452054799, 0)
+	username_2.Size = UDim2.new(0, 106, 0, 19)
+	username_2.Font = Enum.Font.GothamMedium
+	username_2.Text = description
+	username_2.TextColor3 = Color3.fromRGB(158, 158, 158)
+	username_2.TextScaled = true
+	username_2.TextSize = 17.000
+	username_2.TextWrapped = true
+
+	RainbowLines.Name = "RainbowLines"
+	RainbowLines.Parent = yousuckmysausage
+	RainbowLines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	RainbowLines.BorderColor3 = Color3.fromRGB(255, 255, 255)
+	RainbowLines.BorderSizePixel = 0
+	RainbowLines.Position = UDim2.new(-0.000379745266, 0, 0.0640668496, 0)
+	RainbowLines.Size = UDim2.new(0, 1, 0, 336)
+
+	UICorner_25.CornerRadius = UDim.new(0, 2)
+	UICorner_25.Parent = RainbowLines
+
+	-- Scripts:
+
+	local function ZFFFOV_fake_script() -- Title.LocalScript 
+		local script = Instance.new('LocalScript', Title)
+
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+		counter = 0
+
+		while wait(0.1)do
+			script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+			counter = counter + 0.01
+		end
+
+	end
+	coroutine.wrap(ZFFFOV_fake_script)()
+	local function CAJPZG_fake_script() -- username.LocalScript 
+		local script = Instance.new('LocalScript', username)
+
+		while wait() do
+			script.Parent.Text = game.Players.LocalPlayer.Name
+		end
+
+	end
+	coroutine.wrap(CAJPZG_fake_script)()
+	local function TZBYHDO_fake_script() -- coolguy.LocalScript 
+		local script = Instance.new('LocalScript', coolguy)
+
+		local Players = game:GetService("Players")
+
+		local player = Players.LocalPlayer
+
+		local userId = player.UserId
+		local thumbType = Enum.ThumbnailType.HeadShot
+		local thumbSize = Enum.ThumbnailSize.Size420x420
+		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+
+		local imageLabel = script.Parent
+		imageLabel.Image = content
+	end
+	coroutine.wrap(TZBYHDO_fake_script)()
+	local function IKEJGB_fake_script() -- coolguy.LocalScript 
+		local script = Instance.new('LocalScript', coolguy)
+
+		pcall(function()end)
+	end
+	coroutine.wrap(IKEJGB_fake_script)()
+	local function WMPKBMM_fake_script() -- RainbowLines.LocalScript 
+		local script = Instance.new('LocalScript', RainbowLines)
+
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+		counter = 0
+
+		while wait(0.1)do
+			script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+			counter = counter + 0.01
+		end
+
+	end
+	coroutine.wrap(WMPKBMM_fake_script)()
+	local function XGUA_fake_script() -- yousuckmysausage.Drag 
+		local script = Instance.new('LocalScript', yousuckmysausage)
+
+		local UserInputService = game:GetService("UserInputService")
+
+		local gui = script.Parent
+
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+
+		local function update(input)
+			local delta = input.Position - dragStart
+			gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+
+		gui.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = gui.Position
+
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+
+		gui.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging then
+				update(input)
+			end
+		end)
+	end
+	coroutine.wrap(XGUA_fake_script)()
+
+	local Win = {}
+
+	function Win:Tab(name, vis)
+		local Tab = Instance.new("ScrollingFrame")
+		local UIListLayout = Instance.new("UIListLayout")
+		local TabButton = Instance.new("TextButton")
+		local UICorner_21 = Instance.new("UICorner")
+		local UICorner_22 = Instance.new("UICorner")
+
+		Tab.Name = name.. "Tab"
+		Tab.Parent = Tab1
+		Tab.Active = true
+		Tab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+		Tab.BackgroundTransparency = 1.000
+		Tab.BorderColor3 = Color3.fromRGB(30, 30, 30)
+		Tab.Position = UDim2.new(0, 0, 0.049019821, 0)
+		Tab.Size = UDim2.new(0, 406, 0, 319)
+		Tab.CanvasSize = UDim2.new(0, 0, 0, 0)
+		Tab.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
+		Tab.ScrollBarThickness = 3
+		Tab.Visible = vis
+
+		UIListLayout.Parent = Tab
+		UIListLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
+		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+		UIListLayout.Padding = UDim.new(0, 6)
+
+		TabButton.Name = name.. "TabButton"
+		TabButton.Parent = left
+		TabButton.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+		TabButton.Position = UDim2.new(0.0552325584, 0, 0, 0)
+		TabButton.Size = UDim2.new(0, 157, 0, 29)
+		TabButton.Font = Enum.Font.GothamBold
+		TabButton.Text = name
+		TabButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+		TabButton.TextSize = 18.000
+		TabButton.TextXAlignment = Enum.TextXAlignment.Left
+		TabButton.MouseButton1Click:Connect(function()
+			for i,v in next, Tab1:GetChildren() do
+				v.Visible = false
+			end
+			Tab.Visible = true
+			print(Tab.Name)
+		end)
+
+		UICorner_21.CornerRadius = UDim.new(0, 5)
+		UICorner_21.Parent = TabButton
+
+		UICorner_22.CornerRadius = UDim.new(0, 2)
+		UICorner_22.Parent = left
+
+		local New = {}
+
+		function New:Button(text, callback)
+			local TextButton = Instance.new("TextButton")
+			local UICorner_4 = Instance.new("UICorner")
+
+			local callback = callback or function() end
+
+			TextButton.Parent = Tab
+			TextButton.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+			TextButton.Position = UDim2.new(0.0319410302, 0, 0, 0)
+			TextButton.Size = UDim2.new(0, 377, 0, 29)
+			TextButton.Font = Enum.Font.GothamBold
+			TextButton.Text = text
+			TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextButton.TextSize = 15.000
+			TextButton.TextXAlignment = Enum.TextXAlignment.Left
+			TextButton.MouseButton1Click:Connect(function()
+				pcall(callback)
+			end)
+
+			UICorner_4.CornerRadius = UDim.new(0, 5)
+			UICorner_4.Parent = TextButton
+
+			function New:Label(text)
+				local TextLabel = Instance.new("TextLabel")
+				local UICorner_6 = Instance.new("UICorner")
+
+				TextLabel.Parent = Tab
+				TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+				TextLabel.Size = UDim2.new(0, 377, 0, 29)
+				TextLabel.Font = Enum.Font.GothamBold
+				TextLabel.Text = text
+				TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+				TextLabel.TextSize = 15.000
+				TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+
+				UICorner_6.CornerRadius = UDim.new(0, 5)
+				UICorner_6.Parent = TextLabel
+
+            function New:TextBox(name, box)
+
+            local Notification = Instance.new("TextButton")
+			local UICorner_8 = Instance.new("UICorner")
+			local TextBox = Instance.new("TextBox")
+			local UICorner_9 = Instance.new("UICorner")
+
+			Notification.Name = "Notification"
+			Notification.Parent = Tab
+			Notification.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+			Notification.Position = UDim2.new(0.0319410302, 0, 0, 0)
+			Notification.Size = UDim2.new(0, 377, 0, 29)
+			Notification.Font = Enum.Font.GothamBold
+			Notification.Text = name
+			Notification.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Notification.TextSize = 15.000
+			Notification.TextXAlignment = Enum.TextXAlignment.Left
+			Notification.MouseButton1Click:Connect(function()
+				TextBox:TweenSize(UDim2.new(0, 250, 0, 17), "Out", "Sine",0.3)
+				TextBox:TweenPosition(UDim2.new(0.30, 0, 0.207, 0), "Out", "Sine",0.3)
+				Notification.MouseLeave:Connect(function()
+					TextBox:TweenSize(UDim2.new(0, 95, 0, 17), "Out", "Sine",0.3)
+					TextBox:TweenPosition(UDim2.new(0.72, 0, 0.207, 0), "Out", "Sine",0.3)
+				end)
+			end)
+
+			UICorner_8.CornerRadius = UDim.new(0, 5)
+			UICorner_8.Parent = Notification
+
+			TextBox.Parent = Notification
+			TextBox.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+			TextBox.Position = UDim2.new(0.720185876, 0, 0.206896558, 0)
+			TextBox.Size = UDim2.new(0, 95, 0, 17)
+			TextBox.Font = Enum.Font.GothamBold
+			TextBox.Text = box
+			TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextBox.TextSize = 11.000
+
+			UICorner_9.CornerRadius = UDim.new(0, 5)
+			UICorner_9.Parent = TextBox
+
+            function New:Section(text)
+                local Section = Instance.new("TextLabel")
+
+                Section.Name = "Section"
+                Section.Parent = Tab
+                Section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                Section.BackgroundTransparency = 1.000
+                Section.Position = UDim2.new(-0.00491400482, 0, 0.473186105, 0)
+                Section.Size = UDim2.new(0, 407, 0, 13)
+                Section.Font = Enum.Font.GothamBold
+                Section.Text = text
+                Section.TextColor3 = Color3.fromRGB(95, 95, 95)
+                Section.TextSize = 14.000
+                Section.TextXAlignment = Enum.TextXAlignment.Left
+
+                function New:Toggle(text, callback)
+                    local Toggle = Instance.new("TextLabel")
+                    local UICorner_15 = Instance.new("UICorner")
+                    local ToggleButton = Instance.new("TextButton")
+                    local UICorner_16 = Instance.new("UICorner")
+
+                    local callback = callback or function() end
+
+                    Toggle.Name = "Toggle"
+                    Toggle.Parent = Tab
+                    Toggle.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+                    Toggle.Position = UDim2.new(0, 0, 0.0188087765, 0)
+                    Toggle.Size = UDim2.new(0, 377, 0, 29)
+                    Toggle.Font = Enum.Font.GothamBold
+                    Toggle.Text = text
+                    Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+                    Toggle.TextSize = 15.000
+                    Toggle.TextXAlignment = Enum.TextXAlignment.Left
+                    
+                    UICorner_15.CornerRadius = UDim.new(0, 5)
+                    UICorner_15.Parent = Toggle
+                    
+                    ToggleButton.Name = "ToggleButton"
+                    ToggleButton.Parent = Toggle
+                    ToggleButton.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+                    ToggleButton.Position = UDim2.new(0.917999983, 0, 0.100000001, 0)
+                    ToggleButton.Size = UDim2.new(0, 24, 0, 22)
+                    ToggleButton.Font = Enum.Font.SourceSans
+                    ToggleButton.Text = ""
+                    ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+                    ToggleButton.TextSize = 14.000
+                    
+                    local toggled = false
+
+					ToggleButton.MouseButton1Down:Connect(function()
+						if toggled == false then
+						    ToggleButton.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
+						else
+							ToggleButton.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+						end
+							toggled = not toggled
+							pcall(callback, toggled)
+					end)
+                    
+                    UICorner_16.CornerRadius = UDim.new(0, 80)
+                    UICorner_16.Parent = ToggleButton
+            end
+            end
+            end
+			end
+		end
+		return New
+	end
+	return Win
+end
+
+return Library
