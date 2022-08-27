@@ -329,13 +329,13 @@ function Library:Window(text, description, Canva, vis)
 
 				TextLabel.Parent = Tab
 				TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-				TextLabel.BackgroundTransparency = 0.9
+				TextLabel.BackgroundTransparency = 0
 				TextLabel.Size = UDim2.new(0, 377, 0, 29)
 				TextLabel.Font = Enum.Font.GothamBold
 				TextLabel.Text = text
 				TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 				TextLabel.TextSize = 15.000
-				TextLabel.TextXAlignment = Enum.TextXAlignment.Left
+				TextLabel.TextXAlignment = Enum.TextXAlignment.Center
 
 				UICorner_6.CornerRadius = UDim.new(0, 5)
 				UICorner_6.Parent = TextLabel
