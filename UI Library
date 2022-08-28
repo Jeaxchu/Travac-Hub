@@ -248,7 +248,7 @@ function Library:Window(text, description, Canva, vis)
 
 	local Win = {}
 
-	function Win:Tab(name, vis)
+	function Win:Tab(name, vis, Canva)
 		local Tab = Instance.new("ScrollingFrame")
 		local UIListLayout = Instance.new("UIListLayout")
 		local TabButton = Instance.new("TextButton")
@@ -263,7 +263,7 @@ function Library:Window(text, description, Canva, vis)
 		Tab.BorderColor3 = Color3.fromRGB(30, 30, 30)
 		Tab.Position = UDim2.new(0, 0, 0.049019821, 0)
 		Tab.Size = UDim2.new(0, 406, 0, 319)
-		Tab.CanvasSize = UDim2.new(0, 0, 0, 0)
+		Tab.CanvasSize = UDim2.new(0, 0, Canva, 0)
 		Tab.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 		Tab.ScrollBarThickness = 3
 		Tab.Visible = vis
