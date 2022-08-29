@@ -1,6 +1,5 @@
 -- Rule : 
 -- 1 Don't Claim This As Your Gui
--- it take me 2 Month to learn to make this things so pls don't
 -- Credits To Owner :
 -- Discord = Trafalgar.D Dingle#1951
 -- Roblox  = istillplaying2
@@ -410,12 +409,16 @@ function Library:Window(text, description, Canva, vis)
 			end
 
                 function New:Toggle(text, callback)
+				local actions = {}
+				local toggles = false
+
+				text = text or "New Toggle"
+				callback = callback or function() end
+
                     local Toggle = Instance.new("TextLabel")
                     local UICorner_15 = Instance.new("UICorner")
                     local ToggleButton = Instance.new("TextButton")
                     local UICorner_16 = Instance.new("UICorner")
-
-                    local callback = callback or function() end
 
                     Toggle.Name = "Toggle"
                     Toggle.Parent = Tab
@@ -441,20 +444,21 @@ function Library:Window(text, description, Canva, vis)
                     ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
                     ToggleButton.TextSize = 14.000
                     
-                    local toggled = false
-
-					ToggleButton.MouseButton1Down:Connect(function()
-						if toggled == false then
-						    ToggleButton.BackgroundColor3 = Color3.fromRGB(85, 255, 255)
-						else
-							ToggleButton.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-						end
-							toggled = not toggled
-							pcall(callback, toggled)
-					end)
-                    
                     UICorner_16.CornerRadius = UDim.new(0, 80)
                     UICorner_16.Parent = ToggleButton
+
+					local function Fire()
+					    enabled = not enabled	
+						ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
+						pcall(callback, enabled)
+					end
+
+					ToggleButton.MouseButton1Click:Connect(Fire)
+
+					function actions:Set(ong)
+					ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
+					pcall(callback, arg)
+					end
 		end
 		return New
 	end
