@@ -187,7 +187,7 @@ function Library:Window(text, description, Canva, vis)
 		while wait(0.1)do
 			script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
 
-			counter = counter + 0.1
+			counter = counter + 0.01
 		end
 
 	end
