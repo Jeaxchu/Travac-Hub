@@ -146,21 +146,6 @@ function Library:Window(text, description, Canva, vis)
 
 	-- Scripts:
 
-	local function ZFFFOV_fake_script() -- Title.LocalScript 
-		local script = Instance.new('LocalScript', Title)
-
-		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-
-		counter = 0
-
-		while wait(0.1)do
-			script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
-
-			counter = counter + 0.01
-		end
-
-	end
-	coroutine.wrap(ZFFFOV_fake_script)()
 	local function CAJPZG_fake_script() -- username.LocalScript 
 		local script = Instance.new('LocalScript', username)
 
