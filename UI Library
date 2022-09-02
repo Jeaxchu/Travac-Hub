@@ -13,7 +13,6 @@ function Library:Window(text, description, Canva, vis)
 	local yousuckmysausage = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
 	local Title = Instance.new("TextLabel")
-	local UIGradient = Instance.new("UIGradient")
 	local UICorner_2 = Instance.new("UICorner")
 	local Tab1 = Instance.new("Frame")
 	local UICorner_3 = Instance.new("UICorner")
@@ -48,17 +47,14 @@ function Library:Window(text, description, Canva, vis)
 	Title.Name = "Title"
 	Title.Parent = yousuckmysausage
 	Title.Active = true
-	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
 	Title.BorderSizePixel = 0
 	Title.Size = UDim2.new(0, 584, 0, 23)
 	Title.Font = Enum.Font.GothamBold
 	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(0, 0, 0)
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextSize = 16.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
-
-	UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(138, 224, 255)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(255, 131, 253))}
-	UIGradient.Parent = Title
 
 	UICorner_2.CornerRadius = UDim.new(0, 2)
 	UICorner_2.Parent = Title
