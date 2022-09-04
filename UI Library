@@ -171,7 +171,7 @@ function Library:Window(text, description, Canva, vis)
 	Title.Position = UDim2.new(0.00299999816, 0, 0, 0)
 	Title.Size = UDim2.new(0, 582, 0, 23)
 	Title.Font = Enum.Font.GothamBold
-	Title.Text = "  Oxtagon Hub"
+	Title.Text = text
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextSize = 16.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
