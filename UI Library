@@ -35,6 +35,7 @@ game:service'Players'.LocalPlayer.Idled:connect(function()
 bb:CaptureController()bb:ClickButton2(Vector2.new())
 ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
 
+
 -- Window
 
 local Library = {}
@@ -72,7 +73,7 @@ function Library:Window(text, description, Canva, vis)
 	yousuckmysausage.Name = "*yousuckmysausage*"
 	yousuckmysausage.Parent = suckmysausage
 	yousuckmysausage.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-	yousuckmysausage.Position = UDim2.new(0.303297043, 0, 0.0868167207, 0)
+	yousuckmysausage.Position = UDim2.new(0.137622446, 0, 0.175445497, 0)
 	yousuckmysausage.ClipsDescendants = true
 	yousuckmysausage.Size = UDim2.new(0, 584, 0, 359)
 	yousuckmysausage.Visible = vis
@@ -170,7 +171,7 @@ function Library:Window(text, description, Canva, vis)
 	Title.Position = UDim2.new(0.00299999816, 0, 0, 0)
 	Title.Size = UDim2.new(0, 582, 0, 23)
 	Title.Font = Enum.Font.GothamBold
-	Title.Text = text
+	Title.Text = "  Oxtagon Hub"
 	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
 	Title.TextSize = 16.000
 	Title.TextXAlignment = Enum.TextXAlignment.Left
