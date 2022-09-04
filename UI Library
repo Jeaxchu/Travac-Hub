@@ -1,8 +1,39 @@
+--  New Update  --
+-- [ 1. Minimize   ] --
+-- [ 2. Close      ] --
+-- [ 3. Anti Kick  ] --
+
+---------------------------------------------
+
 -- Rule : 
 -- Don't Delete This Credits
 -- Credits To Owner :
 -- Discord = Trafalgar.D Dingle#1951
 -- Roblox  = istillplaying2
+
+-- Anti Kick
+
+local ba=Instance.new("ScreenGui")
+local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
+local _b=Instance.new("TextLabel")local ab=Instance.new("TextLabel")ba.Parent=game.CoreGui
+ba.ZIndexBehavior=Enum.ZIndexBehavior.Sibling;ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+ca.Visible = false
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)_b.Parent=da
+da.Visible = false
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
 
 -- Window
 
@@ -12,8 +43,6 @@ function Library:Window(text, description, Canva, vis)
 	local suckmysausage = Instance.new("ScreenGui")
 	local yousuckmysausage = Instance.new("Frame")
 	local UICorner = Instance.new("UICorner")
-	local Title = Instance.new("TextLabel")
-	local UICorner_2 = Instance.new("UICorner")
 	local Tab1 = Instance.new("Frame")
 	local UICorner_3 = Instance.new("UICorner")
 	local playerinfo = Instance.new("Frame")
@@ -26,6 +55,12 @@ function Library:Window(text, description, Canva, vis)
 	local UICorner_25 = Instance.new("UICorner")
 	local left = Instance.new("ScrollingFrame")
 	local UIListLayout_3 = Instance.new("UIListLayout")
+	local Title = Instance.new("TextLabel")
+	local UICorner_2 = Instance.new("UICorner")
+	local TextButton_2 = Instance.new("TextButton")
+	local UICorner_26 = Instance.new("UICorner")
+	local TextButton_3 = Instance.new("TextButton")
+	local UICorner_27 = Instance.new("UICorner")
 
 	suckmysausage.Parent = game.CoreGui
 
@@ -38,26 +73,12 @@ function Library:Window(text, description, Canva, vis)
 	yousuckmysausage.Parent = suckmysausage
 	yousuckmysausage.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
 	yousuckmysausage.Position = UDim2.new(0.303297043, 0, 0.0868167207, 0)
+	yousuckmysausage.ClipsDescendants = true
 	yousuckmysausage.Size = UDim2.new(0, 584, 0, 359)
 	yousuckmysausage.Visible = vis
 
 	UICorner.CornerRadius = UDim.new(0, 2)
 	UICorner.Parent = yousuckmysausage
-
-	Title.Name = "Title"
-	Title.Parent = yousuckmysausage
-	Title.Active = true
-	Title.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
-	Title.BorderSizePixel = 0
-	Title.Size = UDim2.new(0, 584, 0, 23)
-	Title.Font = Enum.Font.GothamBold
-	Title.Text = text
-	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-	Title.TextSize = 16.000
-	Title.TextXAlignment = Enum.TextXAlignment.Left
-
-	UICorner_2.CornerRadius = UDim.new(0, 2)
-	UICorner_2.Parent = Title
 
 	Tab1.Name = "Tab1"
 	Tab1.Parent = yousuckmysausage
@@ -134,15 +155,65 @@ function Library:Window(text, description, Canva, vis)
 	RainbowLines.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	RainbowLines.BorderColor3 = Color3.fromRGB(255, 255, 255)
 	RainbowLines.BorderSizePixel = 0
-	RainbowLines.Position = UDim2.new(-0.000379745266, 0, 0.0640668496, 0)
-	RainbowLines.Size = UDim2.new(0, 1, 0, 336)
+	RainbowLines.Position = UDim2.new(0.00128767127, 0, -0.00100000016, 0)
+	RainbowLines.Size = UDim2.new(0, 1, 0, 359)
 
 	UICorner_25.CornerRadius = UDim.new(0, 2)
 	UICorner_25.Parent = RainbowLines
+	
+	Title.Name = "Title"
+	Title.Parent = yousuckmysausage
+	Title.Active = true
+	Title.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+	Title.BorderSizePixel = 0
+	Title.ClipsDescendants = true
+	Title.Position = UDim2.new(0.00299999816, 0, 0, 0)
+	Title.Size = UDim2.new(0, 582, 0, 23)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = "  Oxtagon Hub"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 16.000
+	Title.TextXAlignment = Enum.TextXAlignment.Left
 
+	UICorner_2.CornerRadius = UDim.new(0, 2)
+	UICorner_2.Parent = Title
+
+	TextButton_2.Parent = yousuckmysausage
+	TextButton_2.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	TextButton_2.Position = UDim2.new(0.937925577, 0, 0, 0)
+	TextButton_2.Size = UDim2.new(0, 34, 0, 23)
+	TextButton_2.Font = Enum.Font.GothamBold
+	TextButton_2.Text = " X"
+	TextButton_2.TextColor3 = Color3.fromRGB(254, 254, 254)
+	TextButton_2.TextSize = 17.000
+	TextButton_2.MouseButton1Click:Connect(function ()
+		game:GetService("CoreGui")["suckmysausage;)"]:Destroy()
+	end)
+
+	UICorner_26.CornerRadius = UDim.new(0, 2)
+	UICorner_26.Parent = TextButton_2
+
+	TextButton_3.Parent = yousuckmysausage
+	TextButton_3.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+	TextButton_3.Position = UDim2.new(0.864295423, 0, 0, 0)
+	TextButton_3.Size = UDim2.new(0, 34, 0, 23)
+	TextButton_3.Font = Enum.Font.GothamBold
+	TextButton_3.Text = "-"
+	TextButton_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+	TextButton_3.TextSize = 20.000
+	TextButton_3.MouseButton1Click:Connect(function ()
+		if yousuckmysausage.Size == UDim2.new(0, 584, 0, 359) then
+			yousuckmysausage:TweenSize(UDim2.new(0, 584, 0, 22), "Out", "Sine",0.8)
+		elseif yousuckmysausage.Size == UDim2.new(0, 584, 0, 22) then
+			yousuckmysausage:TweenSize(UDim2.new(0, 584, 0, 359), "Out", "Sine",0.8)
+		end
+	end)
+
+	UICorner_27.CornerRadius = UDim.new(0, 2)
+	UICorner_27.Parent = TextButton_3
 	-- Scripts:
 
-	local function CAJPZG_fake_script() -- username.LocalScript 
+	local function UVMMEL_fake_script() -- username.LocalScript 
 		local script = Instance.new('LocalScript', username)
 
 		while wait() do
@@ -150,8 +221,8 @@ function Library:Window(text, description, Canva, vis)
 		end
 
 	end
-	coroutine.wrap(CAJPZG_fake_script)()
-	local function TZBYHDO_fake_script() -- coolguy.LocalScript 
+	coroutine.wrap(UVMMEL_fake_script)()
+	local function ZGVXPQI_fake_script() -- coolguy.LocalScript 
 		local script = Instance.new('LocalScript', coolguy)
 
 		local Players = game:GetService("Players")
@@ -166,14 +237,14 @@ function Library:Window(text, description, Canva, vis)
 		local imageLabel = script.Parent
 		imageLabel.Image = content
 	end
-	coroutine.wrap(TZBYHDO_fake_script)()
-	local function IKEJGB_fake_script() -- coolguy.LocalScript 
+	coroutine.wrap(ZGVXPQI_fake_script)()
+	local function QXFXI_fake_script() -- coolguy.LocalScript 
 		local script = Instance.new('LocalScript', coolguy)
 
 		pcall(function()end)
 	end
-	coroutine.wrap(IKEJGB_fake_script)()
-	local function WMPKBMM_fake_script() -- RainbowLines.LocalScript 
+	coroutine.wrap(QXFXI_fake_script)()
+	local function SIDNN_fake_script() -- RainbowLines.LocalScript 
 		local script = Instance.new('LocalScript', RainbowLines)
 
 		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
@@ -187,8 +258,8 @@ function Library:Window(text, description, Canva, vis)
 		end
 
 	end
-	coroutine.wrap(WMPKBMM_fake_script)()
-	local function XGUA_fake_script() -- yousuckmysausage.Drag 
+	coroutine.wrap(SIDNN_fake_script)()
+	local function YCUQ_fake_script() -- yousuckmysausage.Drag 
 		local script = Instance.new('LocalScript', yousuckmysausage)
 
 		local UserInputService = game:GetService("UserInputService")
@@ -231,7 +302,22 @@ function Library:Window(text, description, Canva, vis)
 			end
 		end)
 	end
-	coroutine.wrap(XGUA_fake_script)()
+	coroutine.wrap(YCUQ_fake_script)()
+	local function PHJY_fake_script() -- Title.LocalScript 
+		local script = Instance.new('LocalScript', Title)
+
+		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+
+		counter = 0
+
+		while wait(0.1)do
+			script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+
+			counter = counter + 0.01
+		end
+
+	end
+	coroutine.wrap(PHJY_fake_script)()
 
 	local Win = {}
 
@@ -308,30 +394,30 @@ function Library:Window(text, description, Canva, vis)
 			UICorner_4.CornerRadius = UDim.new(0, 5)
 			UICorner_4.Parent = TextButton
 
-			end
+		end
 
-			function New:Label(text)
-				local TextLabel = Instance.new("TextLabel")
-				local UICorner_6 = Instance.new("UICorner")
+		function New:Label(text)
+			local TextLabel = Instance.new("TextLabel")
+			local UICorner_6 = Instance.new("UICorner")
 
-				TextLabel.Parent = Tab
-				TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-				TextLabel.BackgroundTransparency = 0
-				TextLabel.Size = UDim2.new(0, 377, 0, 29)
-				TextLabel.Font = Enum.Font.GothamBold
-				TextLabel.Text = text
-				TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
-				TextLabel.TextSize = 15.000
-				TextLabel.TextXAlignment = Enum.TextXAlignment.Center
+			TextLabel.Parent = Tab
+			TextLabel.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+			TextLabel.BackgroundTransparency = 0
+			TextLabel.Size = UDim2.new(0, 377, 0, 29)
+			TextLabel.Font = Enum.Font.GothamBold
+			TextLabel.Text = text
+			TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+			TextLabel.TextSize = 15.000
+			TextLabel.TextXAlignment = Enum.TextXAlignment.Center
 
-				UICorner_6.CornerRadius = UDim.new(0, 5)
-				UICorner_6.Parent = TextLabel
+			UICorner_6.CornerRadius = UDim.new(0, 5)
+			UICorner_6.Parent = TextLabel
 
-			end
+		end
 
-            function New:TextBox(name, box)
+		function New:TextBox(name, box)
 
-            local Notification = Instance.new("TextButton")
+			local Notification = Instance.new("TextButton")
 			local UICorner_8 = Instance.new("UICorner")
 			local TextBox = Instance.new("TextBox")
 			local UICorner_9 = Instance.new("UICorner")
@@ -370,76 +456,76 @@ function Library:Window(text, description, Canva, vis)
 			UICorner_9.CornerRadius = UDim.new(0, 5)
 			UICorner_9.Parent = TextBox
 
+		end
+
+		function New:Section(text)
+			local Section = Instance.new("TextLabel")
+
+			Section.Name = "Section"
+			Section.Parent = Tab
+			Section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+			Section.BackgroundTransparency = 1.000
+			Section.Position = UDim2.new(-0.00491400482, 0, 0.473186105, 0)
+			Section.Size = UDim2.new(0, 407, 0, 13)
+			Section.Font = Enum.Font.GothamBold
+			Section.Text = text
+			Section.TextColor3 = Color3.fromRGB(95, 95, 95)
+			Section.TextSize = 14.000
+			Section.TextXAlignment = Enum.TextXAlignment.Left
+
+		end
+
+		function New:Toggle(text, callback)
+			local actions = {}
+			local toggles = false
+
+			text = text or "New Toggle"
+			callback = callback or function() end
+
+			local Toggle = Instance.new("TextLabel")
+			local UICorner_15 = Instance.new("UICorner")
+			local ToggleButton = Instance.new("TextButton")
+			local UICorner_16 = Instance.new("UICorner")
+
+			Toggle.Name = "Toggle"
+			Toggle.Parent = Tab
+			Toggle.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+			Toggle.Position = UDim2.new(0, 0, 0.0188087765, 0)
+			Toggle.Size = UDim2.new(0, 377, 0, 29)
+			Toggle.Font = Enum.Font.GothamBold
+			Toggle.Text = text
+			Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
+			Toggle.TextSize = 15.000
+			Toggle.TextXAlignment = Enum.TextXAlignment.Left
+
+			UICorner_15.CornerRadius = UDim.new(0, 5)
+			UICorner_15.Parent = Toggle
+
+			ToggleButton.Name = "ToggleButton"
+			ToggleButton.Parent = Toggle
+			ToggleButton.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
+			ToggleButton.Position = UDim2.new(0.917999983, 0, 0.100000001, 0)
+			ToggleButton.Size = UDim2.new(0, 24, 0, 22)
+			ToggleButton.Font = Enum.Font.SourceSans
+			ToggleButton.Text = ""
+			ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+			ToggleButton.TextSize = 14.000
+
+			UICorner_16.CornerRadius = UDim.new(0, 80)
+			UICorner_16.Parent = ToggleButton
+
+			local function Fire()
+				enabled = not enabled	
+				ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
+				pcall(callback, enabled)
 			end
 
-            function New:Section(text)
-                local Section = Instance.new("TextLabel")
+			ToggleButton.MouseButton1Click:Connect(Fire)
 
-                Section.Name = "Section"
-                Section.Parent = Tab
-                Section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-                Section.BackgroundTransparency = 1.000
-                Section.Position = UDim2.new(-0.00491400482, 0, 0.473186105, 0)
-                Section.Size = UDim2.new(0, 407, 0, 13)
-                Section.Font = Enum.Font.GothamBold
-                Section.Text = text
-                Section.TextColor3 = Color3.fromRGB(95, 95, 95)
-                Section.TextSize = 14.000
-                Section.TextXAlignment = Enum.TextXAlignment.Left
-
+			function actions:Set(ong)
+				ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
+				pcall(callback, arg)
 			end
-
-                function New:Toggle(text, callback)
-				local actions = {}
-				local toggles = false
-
-				text = text or "New Toggle"
-				callback = callback or function() end
-
-                    local Toggle = Instance.new("TextLabel")
-                    local UICorner_15 = Instance.new("UICorner")
-                    local ToggleButton = Instance.new("TextButton")
-                    local UICorner_16 = Instance.new("UICorner")
-
-                    Toggle.Name = "Toggle"
-                    Toggle.Parent = Tab
-                    Toggle.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
-                    Toggle.Position = UDim2.new(0, 0, 0.0188087765, 0)
-                    Toggle.Size = UDim2.new(0, 377, 0, 29)
-                    Toggle.Font = Enum.Font.GothamBold
-                    Toggle.Text = text
-                    Toggle.TextColor3 = Color3.fromRGB(255, 255, 255)
-                    Toggle.TextSize = 15.000
-                    Toggle.TextXAlignment = Enum.TextXAlignment.Left
-                    
-                    UICorner_15.CornerRadius = UDim.new(0, 5)
-                    UICorner_15.Parent = Toggle
-                    
-                    ToggleButton.Name = "ToggleButton"
-                    ToggleButton.Parent = Toggle
-                    ToggleButton.BackgroundColor3 = Color3.fromRGB(56, 56, 56)
-                    ToggleButton.Position = UDim2.new(0.917999983, 0, 0.100000001, 0)
-                    ToggleButton.Size = UDim2.new(0, 24, 0, 22)
-                    ToggleButton.Font = Enum.Font.SourceSans
-                    ToggleButton.Text = ""
-                    ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
-                    ToggleButton.TextSize = 14.000
-                    
-                    UICorner_16.CornerRadius = UDim.new(0, 80)
-                    UICorner_16.Parent = ToggleButton
-
-					local function Fire()
-					    enabled = not enabled	
-						ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
-						pcall(callback, enabled)
-					end
-
-					ToggleButton.MouseButton1Click:Connect(Fire)
-
-					function actions:Set(ong)
-					ToggleButton.BackgroundColor3 = enabled and Color3.fromRGB(85, 255, 255) or Color3.fromRGB(56, 56, 56)
-					pcall(callback, arg)
-					end
 		end
 		return New
 	end
