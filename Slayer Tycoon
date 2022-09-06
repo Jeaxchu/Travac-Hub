@@ -1,4 +1,4 @@
--- V1 lol 💀
+-- V1 lol 💀x7
 
 local ba=Instance.new("ScreenGui")
 local ca=Instance.new("TextLabel")local da=Instance.new("Frame")
@@ -26,7 +26,7 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istil
 
 local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true) -- Create Window
 
-local a = s:Tab("  Main | Farming", true, 1.5)
+local a = s:Tab("  Main | Farming", true, 1.6)
 
 local b = s:Tab("  Auto Kill", false, 1.5)
 
@@ -57,6 +57,8 @@ a:Section("   Don't Click This More Than Once:")
 
 a:Button("  Delete Anti Exploit", function()
 	game.Workspace.DirtsAntiExploit:Destroy()
+	game:GetService("Workspace").SafetyNetAt:Destroy()
+	game:GetService("Workspace").SafetyNetTP:Destroy()
 end)
 
 a:Button("  Run and Roll no cooldown [double press w to run]", function()
@@ -288,102 +290,120 @@ a:Button("  Auto Buy", function()
         end
 end)
 
+a:Button("  Auto Steal Woods", function()
+        for i,v in pairs(game:GetService("Workspace").Wood.Handle:GetDescendants()) do
+            if v:IsA"TouchTransmitter" then
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+            end
+        end
+end)
+
+a:Button("  Auto Steal Mishirin Ore", function()
+        for i,v in pairs(game:GetService("Workspace")["Mishirin Ore"].Handle:GetDescendants()) do
+            if v:IsA"TouchTransmitter" then
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+            end
+        end
+end)
+
 b:Label("  It will hurt a bit :3")
 
 b:Section("   Npcs")	
 
 b:Button("  Demon 1", function()
 game:GetService("Workspace").MobsHolder.Demon1.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon1.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Demon1.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 2", function()
 game:GetService("Workspace").MobsHolder.Demon2.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon2.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Demon2.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 3", function()
 game:GetService("Workspace").MobsHolder.Demon3.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon3.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Demon3.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 4", function()
 game:GetService("Workspace").MobsHolder.Demon4.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon4.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Demon4.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Slayer 1", function()
 game:GetService("Workspace").MobsHolder.Slayer1.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Slayer1.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Slayer1.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Slayer 2", function()
 game:GetService("Workspace").MobsHolder.Slayer2.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Slayer2.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Slayer2.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Slayer 3", function()
 game:GetService("Workspace").MobsHolder.Slayer3.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Slayer3.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Slayer3.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Slayer 4", function()
 game:GetService("Workspace").MobsHolder.Slayer4.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Slayer4.HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+tp(game:GetService("Workspace").MobsHolder.Slayer4.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Section("   Boss")
 
 b:Button("  Spider Demon", function()
     game:GetService("Workspace").BossHolder["Spider Demon"].Humanoid.Health = 0
-	tp(game:GetService("Workspace").BossHolder["Spider Demon"].HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").BossHolder["Spider Demon"].HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Shockwave Demon", function()
     game:GetService("Workspace").BossHolder["Shockwave Demon"].Humanoid.Health = 0
-	tp(game:GetService("Workspace").BossHolder["Shockwave Demon"].HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").BossHolder["Shockwave Demon"].HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Obi Demon", function()
     game:GetService("Workspace").BossHolder["Obi Demon"].Humanoid.Health = 0
-	tp(game:GetService("Workspace").BossHolder["Obi Demon"].HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").BossHolder["Obi Demon"].HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Sickle Demon", function()
     game:GetService("Workspace").BossHolder["Sickle Demon"].Humanoid.Health = 0
-	tp(game:GetService("Workspace").BossHolder["Sickle Demon"].HumanoidRootPart.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").BossHolder["Sickle Demon"].HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 c:Section("   Tycoons [ Click This Two Times ]")
 
 c:Button(" Rice Fields",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons["Rice Fields."].Essentials.Spawn.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").TycoonSets.Tycoons["Rice Fields."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Button(" Grasslands",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons.Grasslands.Essentials.Spawn.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").TycoonSets.Tycoons.Grasslands.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Button(" Forest",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons.Forest.Essentials.Spawn.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").TycoonSets.Tycoons.Forest.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Button(" Wisteria Forest",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons["Wisteria Forest."].Essentials.Spawn.CFrame * CFrame.new(0,-3,0))
+	tp(game:GetService("Workspace").TycoonSets.Tycoons["Wisteria Forest."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Button(" Mountains",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons.Mountains.Essentials.Spawn.CFrame)
+	tp(game:GetService("Workspace").TycoonSets.Tycoons.Mountains.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Button(" Winter Woods",function ()
-	tp(game:GetService("Workspace").TycoonSets.Tycoons["Winter Woods."].Essentials.Spawn.CFrame)
+	tp(game:GetService("Workspace").TycoonSets.Tycoons["Winter Woods."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
 c:Section("   Mishirin Ore")
 
 c:Button(" Ore",function ()
-	tp(game:GetService("Workspace").RockHitPart.CFrame * CFrame.new(,-14,14))
+	tp(game:GetService("Workspace").RockHitPart.CFrame * CFrame.new(0,-14,14))
 end)
 
 d:Section("   Another Script For This Game")
@@ -460,11 +480,4 @@ end)
 
 e:Button("  Copy PlaceId", function()
     setclipboard("" ..game.PlaceId)
-end)
-
-e:Toggle("  Toggle Test#1", function(b)
-b = bb
-while bb do task.wait()
-    print("Hello")
-end
 end)
