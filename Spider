@@ -1,0 +1,91 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
+
+local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true)
+
+local plr = game.Players.LocalPlayer
+local function tp(place)
+	plr.Character.HumanoidRootPart.CFrame = place
+end
+
+local mm = s:Tab("  Main", true, 1.8)
+
+mm:Section("   Get Tools")
+
+mm:Button("  Yellow Key", function()
+tp(game:GetService("Workspace").Items["Yellow Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Green Key", function()
+tp(game:GetService("Workspace").Items["Green Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Purple Key", function()
+tp(game:GetService("Workspace").Items["Purple Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Orange Key", function()
+tp(game:GetService("Workspace").Items["Orange Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Red Key", function()
+tp(game:GetService("Workspace").Items["Red Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Blue Key", function()
+tp(game:GetService("Workspace").Items["Blue Key"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  C4", function()
+tp(game:GetService("Workspace").Items["C4"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Battery", function()
+tp(game:GetService("Workspace").Items["Battery"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Bug Spray", function()
+tp(game:GetService("Workspace").Items["Bug Spray"].Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Crowbar", function()
+tp(game:GetService("Workspace").Items.Crowbar.Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Wrench", function()
+tp(game:GetService("Workspace").Items.Wrench.Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Button("  Ladder", function()
+tp(game:GetService("Workspace").Items.Ladder.Handle.CFrame * CFrame.new(0,0,-2))
+end)
+
+mm:Section("   Delete Thingy")
+
+mm:Button("  Delete Bunker Door", function()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.BunkerHatchEvent.BunkerDoor.HatchInner:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.BunkerHatchEvent.Trigger:Destroy()
+end)
+
+mm:Button("  Delete ShedDoor", function()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.DeleteMe:Destroy() --Delete Annoying Door
+game:GetService("Workspace").Map01_Cabin.Shed.ShedDoor.Lock:Destroy()
+game:GetService("Workspace").Map01_Cabin.Shed.ShedDoor.InteractAdornee:Destroy()
+end)
+
+mm:Button("  Delete Vault", function()
+game:GetService("Workspace").Map01_Cabin.CABIN.SafeInHouse.SafeDoor.InteractAdornee:Destroy()
+game:GetService("Workspace").Map01_Cabin.CABIN.SafeInHouse.SafeDoor.Pivot:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.SafeInBunker.SafeDoor.Panel:Destroy() --Delete Panel Thingy
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.SafeInBunker.SafeDoor.Lock:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.SafeInBunker.SafeDoor.Pivot:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.SafeInBunker.SafeDoor.InteractAdornee:Destroy()
+
+end)
+
+mm:Button("  Delete Bunker Laser", function()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.Hitbox:Destroy() -- Delete Bunker Laser
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
+game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
+end)
