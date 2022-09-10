@@ -76,7 +76,7 @@ function Library:Window(text, description, Canva, vis)
 	Tab1.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
 	Tab1.Position = UDim2.new(0.301369876, 0, 0.0640668496, 0)
 	Tab1.Size = UDim2.new(0, 407, 0, 334)
-	Tab1.ClipDescendants = true
+	Tab1.ClipsDescendants = true
 	Tab1.BorderSizePixel = 0
 
 	left.Name = "left"
@@ -88,7 +88,7 @@ function Library:Window(text, description, Canva, vis)
 	left.Size = UDim2.new(0, 173, 0, 252)
 	left.CanvasSize = UDim2.new(0, 0, Canva, 0)
 	left.ScrollBarThickness = 2
-	left.ClipDescendants = true
+	left.ClipsDescendants = true
 	left.BorderSizePixel = 0
 
 	UIListLayout_3.Parent = left
@@ -332,7 +332,7 @@ function Library:Window(text, description, Canva, vis)
 		Tab.Position = UDim2.new(0, 0, 0.049019821, 0)
 		Tab.Size = UDim2.new(0, 406, 0, 319)
 		Tab.CanvasSize = UDim2.new(0, 0, Canva, 0)
-		Tab.ClipDescendants = true
+		Tab.ClipsDescendants = true
 		Tab.HorizontalScrollBarInset = Enum.ScrollBarInset.ScrollBar
 		Tab.ScrollBarThickness = 3
 		Tab.Visible = vis
