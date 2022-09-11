@@ -53,6 +53,19 @@ function Library:Window(text, description, Canva, vis)
 	local TextButton_3 = Instance.new("TextButton")
 	local UICorner_27 = Instance.new("UICorner")
 
+    local anothersausage = Instance.new("Frame")
+    local UICorner = Instance.new("UICorner")
+    local list = Instance.new("ScrollingFrame")
+    local UI = Instance.new("UIListLayout")
+    local SearchBar = Instance.new("TextBox")
+    local UICorner_28 = Instance.new("UICorner")
+    local Sample = Instance.new("TextButton")
+    local UICorner_29 = Instance.new("UICorner")
+    local Title2 = Instance.new("TextLabel")
+    local UICorner_30 = Instance.new("UICorner")
+    local TextButton = Instance.new("TextButton")
+    local UICorner_31 = Instance.new("UICorner")
+
 	suckmysausage.Name = "suckmysausage;)"
 	suckmysausage.Parent = game.CoreGui
 	suckmysausage.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -65,6 +78,7 @@ function Library:Window(text, description, Canva, vis)
 	yousuckmysausage.ClipsDescendants = true
 	yousuckmysausage.Size = UDim2.new(0, 584, 0, 359)
 	yousuckmysausage.Visible = vis
+    yousuckmysausage.BorderSizePixel = 0
 
 	UICorner.CornerRadius = UDim.new(0, 2)
 	UICorner.Parent = yousuckmysausage
@@ -149,6 +163,98 @@ function Library:Window(text, description, Canva, vis)
 	RainbowLines.Position = UDim2.new(0.00128767127, 0, -0.00100000016, 0)
 	RainbowLines.Size = UDim2.new(0, 1, 0, 359)
 
+    anothersausage.Name = "anothersausage"
+    anothersausage.Parent = suckmysausage
+    anothersausage.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+    anothersausage.ClipsDescendants = true
+    anothersausage.Position = UDim2.new(0, 750, 0, 105)
+    anothersausage.Size = UDim2.new(0, 159, 0, 359)
+    
+    UICorner.CornerRadius = UDim.new(0, 2)
+    UICorner.Parent = anothersausage
+    
+    list.Name = "list"
+    list.Parent = anothersausage
+    list.Active = true
+    list.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    list.BackgroundTransparency = 1.000
+    list.BorderSizePixel = 0
+    list.Position = UDim2.new(0, 0, 0.168516785, 0)
+    list.Size = UDim2.new(0, 159, 0, 296)
+    list.ScrollBarThickness = 1
+    
+    UI.Name = "UI"
+    UI.Parent = list
+    UI.HorizontalAlignment = Enum.HorizontalAlignment.Center
+    UI.SortOrder = Enum.SortOrder.LayoutOrder
+    UI.Padding = UDim.new(0, 6)
+    
+    SearchBar.Name = "SearchBar"
+    SearchBar.Parent = anothersausage
+    SearchBar.BackgroundColor3 = Color3.fromRGB(36, 36, 36)
+    SearchBar.ClipsDescendants = true
+    SearchBar.Position = UDim2.new(0.0287106931, 0, 0.0771782696, 0)
+    SearchBar.Size = UDim2.new(0, 148, 0, 23)
+    SearchBar.ClearTextOnFocus = false
+    SearchBar.Font = Enum.Font.GothamBold
+    SearchBar.PlaceholderText = "Search"
+    SearchBar.Text = ""
+    SearchBar.TextColor3 = Color3.fromRGB(255, 255, 255)
+    SearchBar.TextSize = 15.000
+    
+    UICorner_28.CornerRadius = UDim.new(0, 5)
+    UICorner_28.Parent = SearchBar
+    
+    Sample.Name = "Sample"
+    Sample.Parent = anothersausage
+    Sample.BackgroundColor3 = Color3.fromRGB(42, 42, 42)
+    Sample.Position = UDim2.new(-0.0036290884, 0, -0.105849579, 0)
+    Sample.Size = UDim2.new(0, 148, 0, 25)
+    Sample.Font = Enum.Font.GothamBold
+    Sample.Text = " Players"
+    Sample.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Sample.TextSize = 15.000
+    Sample.TextXAlignment = Enum.TextXAlignment.Center
+    
+    UICorner_29.CornerRadius = UDim.new(0, 2)
+    UICorner_29.Parent = Sample
+    
+    Title2.Name = "Title2"
+    Title2.Parent = anothersausage
+    Title2.Active = true
+    Title2.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+    Title2.BorderSizePixel = 0
+    Title2.Position = UDim2.new(0, 0, -4.250359e-08, 0)
+    Title2.Size = UDim2.new(0, 159, 0, 23)
+    Title2.Font = Enum.Font.GothamBold
+    Title2.Text = "  Players List"
+    Title2.TextColor3 = Color3.fromRGB(255, 255, 255)
+    Title2.TextSize = 16.000
+    Title2.TextXAlignment = Enum.TextXAlignment.Left
+    
+    UICorner_30.CornerRadius = UDim.new(0, 2)
+    UICorner_30.Parent = Title
+    
+    TextButton.Parent = anothersausage
+    TextButton.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+    TextButton.ClipsDescendants = true
+    TextButton.Position = UDim2.new(0.78253442, 0, 0, 0)
+    TextButton.Size = UDim2.new(0, 34, 0, 22)
+    TextButton.Font = Enum.Font.GothamBold
+    TextButton.Text = "-"
+    TextButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+    TextButton.TextSize = 20.000
+    TextButton.MouseButton1Click:Connect(function ()
+        if anothersausage.Size == UDim2.new(0, 159, 0, 359) then
+            anothersausage:TweenSize(UDim2.new(0, 120, 0, 22), "Out", "Sine",0.8)
+        elseif anothersausage.Size == UDim2.new(0, 120, 0, 22) then
+            anothersausage:TweenSize(UDim2.new(0, 159, 0, 359), "Out", "Sine",0.8)
+        end
+    end)
+    
+    UICorner_31.CornerRadius = UDim.new(0, 2)
+    UICorner_31.Parent = TextButton
+
 	UICorner_25.CornerRadius = UDim.new(0, 2)
 	UICorner_25.Parent = RainbowLines
 	
@@ -208,54 +314,176 @@ function Library:Window(text, description, Canva, vis)
 
 	UICorner_27.CornerRadius = UDim.new(0, 2)
 	UICorner_27.Parent = TextButton_3
-	-- Scripts:
-
-	local function UVMMEL_fake_script() -- username.LocalScript 
-		local script = Instance.new('LocalScript', username)
-
-		while wait() do
-			script.Parent.Text = game.Players.LocalPlayer.Name
-		end
-
-	end
-	coroutine.wrap(UVMMEL_fake_script)()
-	local function ZGVXPQI_fake_script() -- coolguy.LocalScript 
-		local script = Instance.new('LocalScript', coolguy)
-
-		local Players = game:GetService("Players")
-
-		local player = Players.LocalPlayer
-
-		local userId = player.UserId
-		local thumbType = Enum.ThumbnailType.HeadShot
-		local thumbSize = Enum.ThumbnailSize.Size420x420
-		local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
-
-		local imageLabel = script.Parent
-		imageLabel.Image = content
-	end
-	coroutine.wrap(ZGVXPQI_fake_script)()
-	local function QXFXI_fake_script() -- coolguy.LocalScript 
-		local script = Instance.new('LocalScript', coolguy)
-
-		pcall(function()end)
-	end
-	coroutine.wrap(QXFXI_fake_script)()
-	local function SIDNN_fake_script() -- RainbowLines.LocalScript 
-		local script = Instance.new('LocalScript', RainbowLines)
-
-		function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
-
-		counter = 0
-
-		while wait(0.1)do
-			script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
-
-			counter = counter + 0.01
-		end
-
-	end
-	coroutine.wrap(SIDNN_fake_script)()
+    
+    -- Scripts:
+    
+    local function NPPTUVF_fake_script() -- anothersausage.Drag 
+        local script = Instance.new('LocalScript', anothersausage)
+    
+        local UserInputService = game:GetService("UserInputService")
+        
+        local gui = script.Parent
+        
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+        
+        local function update(input)
+            local delta = input.Position - dragStart
+            gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+        
+        gui.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = gui.Position
+                
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+        
+        gui.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+        
+        UserInputService.InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+    end
+    coroutine.wrap(NPPTUVF_fake_script)()
+    local function FUMR_fake_script() -- anothersausage.LocalScript 
+        local script = Instance.new('LocalScript', anothersausage)
+    
+        local searchBar = script.Parent.SearchBar
+        local items = script.Parent.list
+        
+        function UpdateResults()
+            local search = string.lower(searchBar.Text)
+            for i, v in	 pairs(items:GetChildren()) do
+                if v:IsA("GuiButton") then
+                    if search ~= "" then
+                        local item = string.lower(v.Text)
+                        if string.find(item, search) then
+                            v.Visible = true
+                        else
+                            v.Visible = false
+                        end
+                    else
+                        v.Visible = true
+                    end
+                end
+            end
+        end
+        
+        searchBar.Changed:Connect(UpdateResults)
+    end
+    coroutine.wrap(FUMR_fake_script)()
+    local function KOEAI_fake_script() -- Title.LocalScript 
+        local script = Instance.new('LocalScript', Title2)
+    
+        function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+        
+        counter = 0
+        
+        while wait(0.1)do
+            script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+        
+            counter = counter + 0.01
+        end
+        
+    end
+    coroutine.wrap(KOEAI_fake_script)()
+    local function AFGAJH_fake_script() -- anothersausage.Main 
+        local script = Instance.new('LocalScript', anothersausage)
+    
+        local plrList = script.Parent.list
+        local sample = script.Parent.Sample
+        
+        function clearList()
+            for _, item in pairs(plrList:GetChildren()) do
+                if item:IsA("TextButton") then
+                end
+            end
+        end
+        
+        function fillList()
+            clearList()
+            for _, player in pairs(game.Players:GetChildren()) do
+                if not plrList:FindFirstChild(player.Name) then
+                    local new = sample:Clone()
+                    new.Name = player.Name
+                    new.Text = player.Name
+                    new.Parent = plrList
+                end
+            end
+            plrList.CanvasSize = UDim2.new(0, 0, 0, plrList.UI.AbsoluteContentSize.Y)
+        end
+        
+        fillList()
+        
+        game.Players.PlayerAdded:Connect(fillList)
+        game.Players.PlayerRemoving:Connect(fillList)
+        end
+    coroutine.wrap(AFGAJH_fake_script)()
+    
+        -- Scripts:
+    
+        local function UVMMEL_fake_script() -- username.LocalScript 
+            local script = Instance.new('LocalScript', username)
+    
+            while wait() do
+                script.Parent.Text = game.Players.LocalPlayer.Name
+            end
+    
+        end
+        coroutine.wrap(UVMMEL_fake_script)()
+        local function ZGVXPQI_fake_script() -- coolguy.LocalScript 
+            local script = Instance.new('LocalScript', coolguy)
+    
+            local Players = game:GetService("Players")
+    
+            local player = Players.LocalPlayer
+    
+            local userId = player.UserId
+            local thumbType = Enum.ThumbnailType.HeadShot
+            local thumbSize = Enum.ThumbnailSize.Size420x420
+            local content, isReady = Players:GetUserThumbnailAsync(userId, thumbType, thumbSize)
+    
+            local imageLabel = script.Parent
+            imageLabel.Image = content
+        end
+        coroutine.wrap(ZGVXPQI_fake_script)()
+        local function QXFXI_fake_script() -- coolguy.LocalScript 
+            local script = Instance.new('LocalScript', coolguy)
+    
+            pcall(function()end)
+        end
+        coroutine.wrap(QXFXI_fake_script)()
+        local function SIDNN_fake_script() -- RainbowLines.LocalScript 
+            local script = Instance.new('LocalScript', RainbowLines)
+    
+            function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+    
+            counter = 0
+    
+            while wait(0.1)do
+                script.Parent.BackgroundColor3 = Color3.fromHSV(zigzag(counter),1,1)
+    
+                counter = counter + 0.01
+            end
+    
+        end
+        coroutine.wrap(SIDNN_fake_script)()
 	local function YCUQ_fake_script() -- yousuckmysausage.Drag 
 		local script = Instance.new('LocalScript', yousuckmysausage)
 
