@@ -411,7 +411,8 @@ function Library:Window(text, description, Canva, vis)
         
         function clearList()
             for _, item in pairs(plrList:GetChildren()) do
-                if item:IsA("TextButton") then
+                if item:IsA("GuiButton") then
+                    item:Destroy()
                 end
             end
         end
