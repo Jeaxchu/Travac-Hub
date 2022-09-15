@@ -1,0 +1,70 @@
+if game:GetService"Players".LocalPlayer.Character:WaitForChild("Humanoid").RigType == Enum.HumanoidRigType.R15 then
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
+
+local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true)
+
+local Home = s:Tab("  Home", true)
+
+local Chat = s:Tab("  Chat", false)
+
+local Visual = s:Tab("  Visual", false)
+
+local Aim = s:Tab("  Aim", false)
+
+local Animations = s:Tab("  Animation", false)
+
+local Misc = s:Tab("  Misc", false)
+
+local plr = game.Players.LocalPlayer
+local function tp(place)
+	plr.Character.HumanoidRootPart.CFrame = place
+end
+
+Home:Label("Join The Supported Game For Speacial Feature")
+
+Home:Section("   Supported Game :")
+
+Home:Button("  1. Slayer Tycoon (v1.4)")
+
+Home:Button("  2. Survive and Kill the Killers in Area 51")
+
+Home:Section("   Upcoming Game :")
+
+Home:Button("  1. Break in (Story)")
+
+Chat:Button("  Enable Chat", function()
+
+end)
+
+Chat:Button("  Discord Emojis", function()
+
+end)
+
+Visual:Section(" Esp")
+
+Aim:Section(" Aimbot")
+
+Aim:Section(" Aim Assist")
+
+Animations:Section(" R15 Animations [Don't click this more than one animation")
+
+Animations:Button(" ")
+
+Animations:Section(" R15 Animations [You can click this more than one")
+
+Misc:Section(" Credits :")
+
+Misc:Button("  Copy Discord : Trafalgar.D Dingle#1851" ,function()
+    setclipboard(" Trafalgar.D Dingle#1851")
+end)
+
+Misc:Button("  Copy Username : istillplaying2", function()
+    setclipboard(" istillplaying2")
+end)
+
+Misc:Button("  Copy PlaceId", function()
+	setclipboard("" ..game.PlaceId)
+end)
+
+end
