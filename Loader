@@ -1,0 +1,187 @@
+local Library = {}
+
+function Library:Window(Canva)
+	local Loader = Instance.new("ScreenGui")
+	local Main = Instance.new("Frame")
+	local UICorner = Instance.new("UICorner")
+	local Trueone = Instance.new("TextButton")
+	local UICorner_2 = Instance.new("UICorner")
+	local Title = Instance.new("TextLabel")
+	local UICorner_3 = Instance.new("UICorner")
+	local V1 = Instance.new("TextLabel")
+	local UICorner_4 = Instance.new("UICorner")
+	local UpdateLog = Instance.new("Frame")
+	local Logs = Instance.new("ScrollingFrame")
+	local UICorner_6 = Instance.new("UICorner")
+	local UIListLayout = Instance.new("UIListLayout")
+	local UpdateTitle = Instance.new("TextLabel")
+	local UICorner_7 = Instance.new("UICorner")
+
+	Loader.Name = "Loader"
+	Loader.Parent = game.CoreGui
+	Loader.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+	
+	Main.Name = "Main"
+	Main.Parent = Loader
+	Main.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	Main.Position = UDim2.new(0, 319, 0, 118)
+	Main.Size = UDim2.new(0, 349, 0, 317)
+	
+	UICorner.CornerRadius = UDim.new(0, 6)
+	UICorner.Parent = Main
+	
+	Trueone.Name = "True one"
+	Trueone.Parent = Main
+	Trueone.BackgroundColor3 = Color3.fromRGB(24, 24, 24)
+	Trueone.Position = UDim2.new(0, 89, 0, 255)
+	Trueone.Size = UDim2.new(0, 171, 0, 44)
+	Trueone.Font = Enum.Font.GothamBold
+	Trueone.Text = "Load Script"
+	Trueone.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Trueone.TextSize = 19.000
+	Trueone.MouseButton1Click:Connect(function()
+	game.CoreGui.Loader:Destroy()
+		loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\105\115\116\105\108\108\112\108\97\121\105\110\103\50\47\84\114\97\118\97\99\45\72\117\98\47\109\97\105\110\47\83\117\112\112\111\114\116\101\100\71\97\109\101\115", true))()
+	end)
+	
+	UICorner_2.Parent = Trueone
+	
+	Title.Name = "Title"
+	Title.Parent = Main
+	Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Title.BackgroundTransparency = 1.000
+	Title.Position = UDim2.new(0, 74, 0, 31)
+	Title.Size = UDim2.new(0, 200, 0, 50)
+	Title.Font = Enum.Font.GothamBold
+	Title.Text = "Travac Hub Loader"
+	Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+	Title.TextSize = 19.000
+	
+	UICorner_3.CornerRadius = UDim.new(0, 6)
+	UICorner_3.Parent = Title
+	
+	V1.Name = "V1"
+	V1.Parent = Main
+	V1.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	V1.BorderSizePixel = 0
+	V1.Size = UDim2.new(0, 161, 0, 22)
+	V1.Font = Enum.Font.GothamBold
+	V1.Text = "  Travac Hub Update V1"
+	V1.TextColor3 = Color3.fromRGB(255, 255, 255)
+	V1.TextSize = 14.000
+	V1.TextXAlignment = Enum.TextXAlignment.Left
+	
+	UICorner_4.CornerRadius = UDim.new(0, 6)
+	UICorner_4.Parent = V1
+	
+	UpdateLog.Name = "UpdateLog"
+	UpdateLog.Parent = Main
+	UpdateLog.BackgroundColor3 = Color3.fromRGB(22, 22, 22)
+	UpdateLog.Position = UDim2.new(0, 49, 0, 81)
+	UpdateLog.Size = UDim2.new(0, 250, 0, 160)
+	
+	Logs.Name = "Logs"
+	Logs.Parent = UpdateLog
+	Logs.Active = true
+	Logs.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+	Logs.BackgroundTransparency = 1.000
+	Logs.BorderColor3 = Color3.fromRGB(27, 42, 53)
+	Logs.BorderSizePixel = 0
+	Logs.Position = UDim2.new(0, 5, 0, 27)
+	Logs.Size = UDim2.new(0, 245, 0, 133)
+	Logs.CanvasSize = UDim2.new(0, 0, Canva, 0)
+	Logs.ScrollBarThickness = 1
+
+	UICorner_6.CornerRadius = UDim.new(0, 6)
+	UICorner_6.Parent = UpdateLog
+
+	UIListLayout.Parent = Logs
+	UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+	UIListLayout.Padding = UDim.new(0, 4)
+	
+	UpdateTitle.Name = "Update Title"
+	UpdateTitle.Parent = UpdateLog
+	UpdateTitle.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+	UpdateTitle.BackgroundTransparency = 1.000
+	UpdateTitle.BorderSizePixel = 0
+	UpdateTitle.Position = UDim2.new(0, 5, 0, 6)
+	UpdateTitle.Size = UDim2.new(0, 161, 0, 15)
+	UpdateTitle.Font = Enum.Font.GothamBold
+	UpdateTitle.Text = "  | UPDATE LOG"
+	UpdateTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+	UpdateTitle.TextSize = 13.000
+	UpdateTitle.TextXAlignment = Enum.TextXAlignment.Left
+	
+	UICorner_7.CornerRadius = UDim.new(0, 6)
+	UICorner_7.Parent = UpdateTitle
+
+	local function YMYWT_fake_script() -- Main.Drag 
+		local script = Instance.new('LocalScript', Main)
+	
+		local UserInputService = game:GetService("UserInputService")
+		
+		local gui = script.Parent
+		
+		local dragging
+		local dragInput
+		local dragStart
+		local startPos
+		
+		local function update(input)
+			local delta = input.Position - dragStart
+			gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+		
+		gui.InputBegan:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+				dragging = true
+				dragStart = input.Position
+				startPos = gui.Position
+				
+				input.Changed:Connect(function()
+					if input.UserInputState == Enum.UserInputState.End then
+						dragging = false
+					end
+				end)
+			end
+		end)
+		
+		gui.InputChanged:Connect(function(input)
+			if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+				dragInput = input
+			end
+		end)
+		
+		UserInputService.InputChanged:Connect(function(input)
+			if input == dragInput and dragging then
+				update(input)
+			end
+		end)
+	end
+	coroutine.wrap(YMYWT_fake_script)()
+
+	local New = {}
+
+	function New:Button(text)
+		local Update = Instance.new("TextLabel")
+		local UICorner_5 = Instance.new("UICorner")
+		
+		Update.Name = "Update"
+		Update.Parent = Logs
+		Update.BackgroundColor3 = Color3.fromRGB(35, 35, 35)
+		Update.BackgroundTransparency = 1.000
+		Update.BorderSizePixel = 0
+		Update.Position = UDim2.new(0, 5, 0, 6)
+		Update.Size = UDim2.new(0, 161, 0, 15)
+		Update.Font = Enum.Font.GothamBold
+		Update.Text = text
+		Update.TextColor3 = Color3.fromRGB(255, 255, 255)
+		Update.TextSize = 13.000
+		Update.TextXAlignment = Enum.TextXAlignment.Left
+		
+		UICorner_5.CornerRadius = UDim.new(0, 6)
+		UICorner_5.Parent = Update
+	end
+	return New
+end
+return Library
