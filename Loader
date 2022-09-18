@@ -1,0 +1,17 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Loader%20Library"))()
+
+local s = Library:Window(0)
+
+s:Button(" [+]  3 New Supported Games")
+
+s:Button(" [+]  New Log Update UI")
+
+s:Button(" [+]  Undetected Anti Cheat")
+
+s:Button(" [+]  No Lag After Load")
+
+s:Button(" [-]  Slayer Tycoon Script Updated")
+
+s:Button(" [-]  Toggle Player Info UI")
+
+s:Button(" [-]  Slider UI")
