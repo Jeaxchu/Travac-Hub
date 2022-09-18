@@ -1,10 +1,10 @@
--- V1 lol 💀x7
+-- V1.5 lol 💀x7
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
 
 local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true) -- Create Window
 
-local a = s:Tab("  Main | Farming", true, 1.6)
+local a = s:Tab("  Main | Farming", true, 1.3)
 
 local b = s:Tab("  Auto Kill", false, 1.5)
 
@@ -154,103 +154,82 @@ a:Button("  Run and Roll no cooldown [double press w to run]", function()
 	userInputService.InputBegan:Connect(handleInput)
 end)
 
-a:Section("   Without Sun Tools Gamepass:")
+a:Section("   Auto Farm")
 
-a:Button("  Auto Farm Woods", function()
-	shared.Enabled = true
-
-	local plr = game.Players.LocalPlayer
-	local char = plr.Character
-	local hatchet = plr.Backpack.Hatchet or char.Hatchet
-
-	for i,v in pairs(workspace.Map:GetChildren())do
-		if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
-			repeat wait()
-				char.Humanoid:EquipTool(hatchet)
-				wait()
-				hatchet:Activate()
-				char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
-			until v.Leaves.Transparency == 1
-		end
-	end
-end)
-
-a:Button("  Stop Farm Woods", function()
-	shared.Enabled = false
-
-	local plr = game.Players.LocalPlayer
-	local char = plr.Character
-	local hatchet = plr.Backpack.Hatchet or char.Hatchet
-
-	for i,v in pairs(workspace.Map:GetChildren())do
-		if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
-			repeat wait()
-				char.Humanoid:EquipTool(hatchet)
-				wait()
-				hatchet:Activate()
-				char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
-			until v.Leaves.Transparency == 1
-		end
-	end
-end)
-
-a:Section("   With Sun Tools Gamepass:")
-
-a:Button("  Auto Farm Woods", function()
-	shared.Enabled = true
-
-	local plr = game.Players.LocalPlayer
-	local char = plr.Character
-	local hatchet = plr.Backpack["Sun Hatchet"] or char["Sun Hatchet"]
-
-	for i,v in pairs(workspace.Map:GetChildren())do
-		if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
-			repeat wait()
-				char.Humanoid:EquipTool(hatchet)
-				wait()
-				hatchet:Activate()
-				char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
-			until v.Leaves.Transparency == 1
-		end
-	end
-end)
-
-a:Button("  Stop Farm Woods", function()
-	shared.Enabled = false
-
-	local plr = game.Players.LocalPlayer
-	local char = plr.Character
-	local hatchet = plr.Backpack["Sun Hatchet"] or char["Sun Hatchet"]
-
-	for i,v in pairs(workspace.Map:GetChildren())do
-		if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
-			repeat wait()
-				char.Humanoid:EquipTool(hatchet)
-				wait()
-				hatchet:Activate()
-				char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
-			until v.Leaves.Transparency == 1
-		end
-	end
+a:Toggle("  Auto Farm Woods", function(state)
+    if state then
+        _G.Print = true
+        while _G.Print do
+        shared.Enabled = true
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local hatchet = Backpack["Sun Hatchet"] or Backpack.Hatchet or char.Hatchet or char["Sun Hatchet"]
+    
+        for i,v in pairs(workspace.Map:GetChildren())do
+            if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
+                repeat wait()
+                    char.Humanoid:EquipTool(hatchet)
+                    wait()
+                    hatchet:Activate()
+                    char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
+                until v.Leaves.Transparency == 1
+            end
+        end
+        wait()
+    end
+    else
+        _G.Print = false
+        shared.Enabled = false
+        end
 end)
 
 a:Section("   Main Section:")
 
-a:Button("  Auto Sell Woods [Click This Two Times]", function()
+a:Toggle("  Auto Sell Woods", function(state)
+if state then
+    _G.Print = true
+    while _G.Print do
 	tp(game:GetService("Workspace").Lumberjack.HumanoidRootPart.CFrame)
 	fireproximityprompt(game:GetService("Workspace").Lumberjack.ProxPrompt)
-	tp(game:GetService("Workspace").Lumberjack.HumanoidRootPart.CFrame)
-	fireproximityprompt(game:GetService("Workspace").Lumberjack.ProxPrompt)
+    wait(0.1)
+    end
+else
+_G.Print = false
+end
 end)
 
-a:Button("  Buy Style [Click This Two Times]", function()
+a:Toggle("  Buy Style", function(state)
+if state then
+    _G.Print = true
+    while _G.Print do
 	tp(game:GetService("Workspace").StyleSensei.HumanoidRootPart.CFrame)
 	fireproximityprompt(game:GetService("Workspace").StyleSensei.ProxPrompt)
-	tp(game:GetService("Workspace").StyleSensei.HumanoidRootPart.CFrame)
-	fireproximityprompt(game:GetService("Workspace").StyleSensei.ProxPrompt)
+    wait(0.1)
+    end
+else
+_G.Print = false
+end
 end)
 
-a:Button("  Auto Collect All", function()
+a:Toggle("  Auto Steal Drops", function(state)
+    if state then
+        _G.Print = true
+        while _G.Print do
+        for i,v in pairs(game:GetService("Workspace").Wood.Handle:GetDescendants() or game:GetService("Workspace")["Mishirin Ore"].Handle:GetDescendants()) do
+            if v:IsA"TouchTransmitter" then
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+            end
+        end
+        wait()
+    end
+else
+    _G.Print = false
+end
+end)
+
+a:Button("  Auto Steal Money", function()
 for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
             if v:IsA"TouchTransmitter" and v.Parent.Name == "Giver" then
                 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
@@ -259,26 +238,8 @@ for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants(
         end
 end)
 
-a:Button("  Auto Buy", function()
+a:Button("  Auto Build Base", function()
         for i,v in pairs(getOwner().Buttons:GetDescendants()) do
-            if v:IsA"TouchTransmitter" then
-                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
-            end
-        end
-end)
-
-a:Button("  Auto Steal Woods", function()
-        for i,v in pairs(game:GetService("Workspace").Wood.Handle:GetDescendants()) do
-            if v:IsA"TouchTransmitter" then
-                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
-                firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
-            end
-        end
-end)
-
-a:Button("  Auto Steal Mishirin Ore", function()
-        for i,v in pairs(game:GetService("Workspace")["Mishirin Ore"].Handle:GetDescendants()) do
             if v:IsA"TouchTransmitter" then
                 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
                 firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
@@ -291,23 +252,23 @@ b:Label("  It will hurt a bit :3")
 b:Section("   Npcs")	
 
 b:Button("  Demon 1", function()
-game:GetService("Workspace").MobsHolder.Demon1.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon1.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
+    game:GetService("Workspace").MobsHolder.Demon1.Humanoid.Health = 0
+    tp(game:GetService("Workspace").MobsHolder.Demon1.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 2", function()
-game:GetService("Workspace").MobsHolder.Demon2.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon2.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
+    game:GetService("Workspace").MobsHolder.Demon2.Humanoid.Health = 0
+    tp(game:GetService("Workspace").MobsHolder.Demon2.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 3", function()
-game:GetService("Workspace").MobsHolder.Demon3.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon3.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
+    game:GetService("Workspace").MobsHolder.Demon3.Humanoid.Health = 0
+    tp(game:GetService("Workspace").MobsHolder.Demon3.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Demon 4", function()
-game:GetService("Workspace").MobsHolder.Demon4.Humanoid.Health = 0
-tp(game:GetService("Workspace").MobsHolder.Demon4.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
+    game:GetService("Workspace").MobsHolder.Demon4.Humanoid.Health = 0
+    tp(game:GetService("Workspace").MobsHolder.Demon4.HumanoidRootPart.CFrame * CFrame.new(0,0,-3))
 end)
 
 b:Button("  Slayer 1", function()
@@ -378,10 +339,12 @@ c:Button(" Winter Woods",function ()
 	tp(game:GetService("Workspace").TycoonSets.Tycoons["Winter Woods."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
 end)
 
-c:Section("   Mishirin Ore")
+c:Section("   Others")
 
 c:Button(" Ore",function ()
-	tp(game:GetService("Workspace").RockHitPart.CFrame * CFrame.new(0,-14,14))
+    if game:GetService("Workspace").RockHitPart.Transparency == 0 then
+	  tp(game:GetService("Workspace").RockHitPart.CFrame * CFrame.new(0,-14,14))
+    end
 end)
 
 d:Section("   Another Script For This Game")
@@ -393,7 +356,7 @@ end)
 d:Section("   Scripts")
 
 d:Button("  Inf Yield", function()
-
+    
 end)
 
 d:Button("  Dark Dex [V1]", function()
