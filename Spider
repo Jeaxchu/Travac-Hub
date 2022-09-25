@@ -1,62 +1,128 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
 
-local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true)
+local s = Library:Window("  Travac Hub | Spider", "Travac Hub V1", 0, true)
 
-local plr = game.Players.LocalPlayer
-local function tp(place)
-	plr.Character.HumanoidRootPart.CFrame = place
-end
+local Home = s:Tab("  Home", true)
+local mm = s:Tab("  Main", false, 1.8)
+local Misc = s:Tab("  Misc", false)
 
-local mm = s:Tab("  Main", true, 1.8)
+Home:Label("Anti Afk = Active")
+Home:Label("Anti Fling = Active")
+Home:Label("Anti Kick = Active")
+Home:Label("Join The Supported Game For Speacial Feature")
+Home:Section("   Supported Game :")
+Home:Button("  1. Slayer Tycoon (v1.4)")
+Home:Button("  2. Survive and Kill the Killers in Area 51")
+Home:Section("   Upcoming Game :")
+Home:Button("  1. Break in (Story)")
 
 mm:Section("   Get Tools")
-
 mm:Button("  Yellow Key", function()
-tp(game:GetService("Workspace").Items["Yellow Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Yellow Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game:GetService("Workspace").Items["Yellow Key"].Handle.CFrame
 end)
 
 mm:Button("  Green Key", function()
-tp(game:GetService("Workspace").Items["Green Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Green Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Purple Key", function()
-tp(game:GetService("Workspace").Items["Purple Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Purple Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Orange Key", function()
-tp(game:GetService("Workspace").Items["Orange Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Orange Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Red Key", function()
-tp(game:GetService("Workspace").Items["Red Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Red Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Blue Key", function()
-tp(game:GetService("Workspace").Items["Blue Key"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Blue Key"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  C4", function()
-tp(game:GetService("Workspace").Items["C4"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["C4"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Battery", function()
-tp(game:GetService("Workspace").Items["Battery"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Battery"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Bug Spray", function()
-tp(game:GetService("Workspace").Items["Bug Spray"].Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Bug Spray"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Crowbar", function()
-tp(game:GetService("Workspace").Items.Crowbar.Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Crowbar"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Wrench", function()
-tp(game:GetService("Workspace").Items.Wrench.Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Wrench"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Button("  Ladder", function()
-tp(game:GetService("Workspace").Items.Ladder.Handle.CFrame * CFrame.new(0,0,-2))
+local plr = game:GetService("Workspace").Items["Ladder"]
+local function tp(place)
+	plr.CFrame = place
+end
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
 end)
 
 mm:Section("   Delete Thingy")
@@ -88,4 +154,17 @@ game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.
 game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
 game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
 game:GetService("Workspace").Map01_Cabin.BunkerUnderground.LaserEvent.LaserGrid.LaserHolder.Laser:Destroy()
+end)
+
+Misc:Section(" Credits :")
+
+Misc:Label("  Main Owner : Trafalgar.D Dingle#1951")
+
+Misc:Button("  Copy Discord Server" ,function()
+local Link = "https://discord.gg/A3KbyPuvWZ"
+    setclipboard(Link)
+end)
+
+Misc:Button("  Copy PlaceId", function()
+	setclipboard("" ..game.PlaceId)
 end)
