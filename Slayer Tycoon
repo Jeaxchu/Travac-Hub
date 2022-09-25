@@ -4,14 +4,11 @@ local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istil
 
 local s = Library:Window("  Travac Hub | Slayer Tycoon", "Travac Hub V1", 0, true) -- Create Window
 
-local a = s:Tab("  Main | Farming", true, 1.3)
-
+local Home = s:Tab("  Home", true)
+local a = s:Tab("  Main | Farming", false, 1.3)
 local b = s:Tab("  Auto Kill", false, 1.5)
-
 local c = s:Tab("  Teleport", false)
-
 local d = s:Tab("  Scripts", false)
-
 local e = s:Tab("  Misc", false, 1.2)
 
 local plr = game.Players.LocalPlayer
@@ -29,7 +26,14 @@ local function getOwner()
 	end
 end
 
-a:Label("  Anti Afk = Active")
+Home:Label("Anti Afk = Active")
+Home:Label("Anti Fling = Active")
+Home:Label("Anti Kick = Active")
+Home:Label("Join The Supported Game For Speacial Feature")
+Home:Section("   Supported Game :")
+Home:Button("  [+] Slayer Tycoon (v1.4)")
+Home:Button("  [+] Survive and Kill the Killers in Area 51")
+Home:Button("  [+] Spider")
 
 a:Section("   Don't Click This More Than Once:")
 
