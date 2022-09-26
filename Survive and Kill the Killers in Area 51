@@ -1,19 +1,13 @@
--- V1 lol 💀x7
+-- V1.5 lol 💀x7
 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
 
 local s = Library:Window("  Travac Hub | Survive and Kill the Killers in Area 51", "Travac Hub V1", 0, true) -- Create Window
 
-local Home = s:Tab("  Home", true)
+local Home = s:Tab("  Home", true, 1.5)
 local a = s:Tab("  Main", false, 1.9)
 local b = s:Tab("  Teleport", false)
-local c = s:Tab("  Scripts", false)
 local d = s:Tab("  Misc", false)
-
-local plr = game.Players.LocalPlayer
-local function tp(place)
-    plr.Character.HumanoidRootPart.CFrame = place
-end
 
 Home:Label("Anti Afk = Active")
 Home:Label("Anti Fling = Active")
@@ -24,77 +18,254 @@ Home:Button("  [+] Slayer Tycoon (v1.4)")
 Home:Button("  [+] Survive and Kill the Killers in Area 51")
 Home:Button("  [+] Spider")
 Home:Button("  [+] Tower of Misery")
+Home:Section("   Informations :")
+Home:Button("  Killers Killed : " ..game:GetService("Players").LocalPlayer.leaderstats["Killers Killed"].Value)
 
 a:Section("   Get Guns:")
 
 a:Button("  SVD", function()
-        tp(game:GetService("Workspace").Weapons.SVD.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons.SVD.Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  P90", function()
-        tp(game:GetService("Workspace").Weapons.P90.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons.P90.Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  DB Shotgun", function()
-        tp(game:GetService("Workspace").Weapons["DB Shotgun"].Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["DB Shotgun"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  AWP", function()
-        tp(game:GetService("Workspace").Weapons.AWP.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["AWP"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  M1014", function()
-        tp(game:GetService("Workspace").Weapons.M1014.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["M1014"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  M14", function()
-        tp(game:GetService("Workspace").Weapons.M14.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["M14"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  Desert Eagle", function()
-        tp(game:GetService("Workspace").Weapons["Desert Eagle"].Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["Desert Eagle"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  R870", function()
-        tp(game:GetService("Workspace").Weapons.R870.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["R870"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  Raygun", function()
-        tp(game:GetService("Workspace").Weapons.RayGun.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["Raygun"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  MP5K", function()
-        tp(game:GetService("Workspace").Weapons.MP5k.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["MP5K"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  AK-47", function()
-        tp(game:GetService("Workspace").Weapons["AK-47"].Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["AK-47"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  AN-94", function()
-        tp(game:GetService("Workspace").Weapons["AN-94"].Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["AN-94"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  G36C", function()
-        tp(game:GetService("Workspace").Weapons.G36C.Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["G36C"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Button("  M16A2/M203", function()
-        tp(game:GetService("Workspace").Weapons["M16A2/M203"].Hitbox.CFrame)
+plr = game:GetService("Workspace").Weapons["M16A2/M203"].Hitbox
+local function tp(place)
+    plr.CFrame = place
+end
+
+X1 = plr.CFrame.X
+Y1 = plr.CFrame.Y
+Z1 = plr.CFrame.Z
+wait(0.1)
+
+tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame)
+wait(0)
+plr.CFrame = CFrame.new(X1, Y1, Z1)
 end)
 
 a:Section("   Delete Thingy:")
-
-a:Button("  Delete All Door", function ()
-    game:GetService("Workspace").Doors.Vertical.ToElavator.Door.Door:Destroy()
-	game:GetService("Workspace").Doors.Vertical.EntranceOfArea.Door.Door:Destroy()
-end)
 
 b:Button("  Pack A Punch", function ()
     tp(game:GetService("Workspace").PACKAPUNCH.GUI.CFrame)
 	fireproximityprompt(game:GetService("Workspace").PACKAPUNCH.GUI.ProxPrompt)
 end)
 
-d:Button("   Dicord : Trafalgar.D Dingle#1951", function()
-setclipboard'Trafalgar.D Dingle#1951'
+d:Button("  Infinite Yield", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+d:Button("  Load Secure Dex", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Babyhamsta/RBLX_Scripts/main/Universal/BypassedDarkDexV3.lua", true))()
+end)
+
+d:Section("    Credits")
+
+d:Label("  Main Credits : Trafalgar.D Dingle#1951")
+
+d:Button("  Discord Server", function()
+setclipboard('https://discord.gg/A3KbyPuvWZ')
 end)
