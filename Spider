@@ -14,114 +14,120 @@ Home:Section("   Supported Game :")
 Home:Button("  [+] Slayer Tycoon (v1.4)")
 Home:Button("  [+] Survive and Kill the Killers in Area 51")
 Home:Button("  [+] Spider")
+Home:Button("  [+] Tower of Misery
+
+mm:Button("  Speedrun Win", function()
+    
+end)
 
 mm:Section("   Get Tools")
 mm:Button("  Yellow Key", function()
-local plr = game:GetService("Workspace").Items["Yellow Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game:GetService("Workspace").Items["Yellow Key"].Handle.CFrame
+tp(game:GetService("Workspace").Items["Yellow Key"].Hitbox.CFrame)
+fireclickdetector(game:GetService("Workspace").Items["Yellow Key"].Hitbox.ClickDetector)
 end)
 
 mm:Button("  Green Key", function()
-local plr = game:GetService("Workspace").Items["Green Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Green Key"].Handle.CFrame)
 end)
 
 mm:Button("  Purple Key", function()
-local plr = game:GetService("Workspace").Items["Purple Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Purple Key"].Handle.CFrame)
 end)
 
 mm:Button("  Orange Key", function()
-local plr = game:GetService("Workspace").Items["Orange Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Orange Key"].Handle.CFrame)
 end)
 
 mm:Button("  Red Key", function()
-local plr = game:GetService("Workspace").Items["Red Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Red Key"].Handle.CFrame)
 end)
 
 mm:Button("  Blue Key", function()
-local plr = game:GetService("Workspace").Items["Blue Key"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Blue Key"].Handle.CFrame)
 end)
 
 mm:Button("  C4", function()
-local plr = game:GetService("Workspace").Items["C4"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["C4"].Handle.CFrame)
 end)
 
 mm:Button("  Battery", function()
-local plr = game:GetService("Workspace").Items["Battery"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Battery"].Handle.CFrame)
 end)
 
 mm:Button("  Bug Spray", function()
-local plr = game:GetService("Workspace").Items["Bug Spray"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Bug Spray"].Handle.CFrame)
 end)
 
 mm:Button("  Crowbar", function()
-local plr = game:GetService("Workspace").Items["Crowbar"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Crowbar"].Handle.CFrame)
 end)
 
 mm:Button("  Wrench", function()
-local plr = game:GetService("Workspace").Items["Wrench"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Wrench"].Handle.CFrame)
 end)
 
 mm:Button("  Ladder", function()
-local plr = game:GetService("Workspace").Items["Ladder"]
+local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
 local function tp(place)
 	plr.CFrame = place
 end
 
-tp(game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+tp(game:GetService("Workspace").Items["Ladder"].Handle.CFrame)
 end)
 
 mm:Section("   Delete Thingy")
