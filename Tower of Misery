@@ -8,10 +8,21 @@ local plr = game.Players.LocalPlayer
 local function tp(place)
 	plr.Character.HumanoidRootPart.CFrame = place
 end
- 
-local mm = s:Tab("  Main", true, 1.8)
 
+local Home = s:Tab("  Home", true, 1)
+local mm = s:Tab("  Main", false, 1.8)
 local ss = s:Tab("  Misc", false)
+
+Home:Label("Anti Afk = Active")
+Home:Label("Anti Fling = Active")
+Home:Label("Anti Kick = Active")
+Home:Label("Join The Supported Game For Speacial Feature")
+Home:Section("   Supported Game :")
+Home:Button("  [+] Slayer Tycoon (v1.4)")
+Home:Button("  [+] Survive and Kill the Killers in Area 51")
+Home:Button("  [+] Spider")
+Home:Button("  [+] Tower of Misery")
+Home:Button("  [+] Destruction Simulator")
  
 mm:Section("   Main") -- Create Section
 
