@@ -1,0 +1,56 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
+ 
+local s = Library:Window("  Travac Hub | Destruction Simulator", "Travac Hub V1", 0, true)
+
+local ss = s:Tab("  Home", true, 1)
+local mm = s:Tab("  Main", false, 0)
+
+ss:Label("Anti Afk = Active")
+ss:Label("Anti Fling = Active")
+ss:Label("Anti Kick = Active")
+ss:Label("Join The Supported Game For Speacial Feature")
+ss:Section("   Supported Game :")
+ss:Button("  [+] Slayer Tycoon (v1.4)")
+ss:Button("  [+] Survive and Kill the Killers in Area 51")
+ss:Button("  [+] Spider")
+ss:Button("  [+] Tower of Misery")
+ss:Button("  [+] Destruction Simulator")
+ 
+mm:Section("   Section") -- Create Section
+ 
+mm:Toggle("  Auto Add Money [Inf Money]", function(state)
+    if state then
+        _G.Print = true
+        while _G.Print do
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 99999999)
+        wait()
+    end
+    else
+        _G.Print = false
+        end
+end)
+
+mm:Toggle("  Auto Add Level [Max Level]", function(state)
+    if state then
+        _G.Print = true
+        while _G.Print do
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 15)
+        wait()
+    end
+    else
+        _G.Print = false
+        end
+end)
+
+mm:Toggle("  Auto Rank Up", function(state)
+    if state then
+        _G.Print = true
+        while _G.Print do
+			game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 15)
+			game:GetService("ReplicatedStorage").Remotes.rankUp:FireServer()
+        wait()
+    end
+    else
+        _G.Print = false
+        end
+end)
