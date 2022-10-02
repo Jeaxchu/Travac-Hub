@@ -14,4 +14,6 @@ elseif game.PlaceId == 5118969548 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Spider'))()
 elseif game.PlaceId == 4954752502 then
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Tower%20of%20Misery"))()
+elseif game.PlaceId == 2248408710 then
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Tower%20of%20Misery"))()
 end
