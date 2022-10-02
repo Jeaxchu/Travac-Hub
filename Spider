@@ -14,7 +14,8 @@ Home:Section("   Supported Game :")
 Home:Button("  [+] Slayer Tycoon (v1.4)")
 Home:Button("  [+] Survive and Kill the Killers in Area 51")
 Home:Button("  [+] Spider")
-Home:Button("  [+] Tower of Misery
+Home:Button("  [+] Tower of Misery")
+Home:Button("  [+] Destruction Simulator")
 
 mm:Button("  Speedrun Win", function()
     
