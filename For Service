@@ -1,0 +1,75 @@
+if game.PlaceId == 9872472334 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/zReal-King/Evade/main/Main.lua'))()
+elseif game.PlaceId == 2753915549 or game.PlaceId == 7449423635 or game.PlaceId == 4442272183 then
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+elseif game.PlaceId == 2248408710 then
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
+ 
+local s = Library:Window("  Travac Hub | Destruction Simulator", "Travac Hub V1", 0, true)
+
+local ss = s:Tab("  Home", true, 1)
+local mm = s:Tab("  Main", false, 0)
+
+ss:Label("Anti Afk = Active")
+ss:Label("Anti Fling = Active")
+ss:Label("Anti Kick = Active")
+ss:Label("Join The Supported Game For Speacial Feature")
+ss:Section("   Supported Game :")
+ss:Button("  [+] Slayer Tycoon (v1.4)")
+ss:Button("  [+] Survive and Kill the Killers in Area 51")
+ss:Button("  [+] Spider")
+ss:Button("  [+] Tower of Misery")
+ss:Button("  [+] Destruction Simulator")
+ 
+mm:Section("   Cash")
+ 
+mm:Button("  [+]1M", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 1000000)
+end)
+
+mm:Button("  [+]5M", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 5000000)
+end)
+
+mm:Section("   Level")
+
+mm:Button("  [+]1", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 1)
+end)
+
+mm:Button("  [+]2", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 2)
+end)
+
+mm:Button("  [+]3", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 3)
+end)
+
+mm:Button("  [+]4", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 4)
+end)
+
+mm:Button("  [+]5", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 5)
+end)
+
+mm:Button("  [+]6", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 6)
+end)
+
+mm:Button("  [+]7", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 7)
+end)
+
+mm:Button("  [+]8", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 8)
+end)
+
+mm:Button("  [+]9", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 9)
+end)
+
+mm:Button("  [+]10", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 10)
+end)
+end
