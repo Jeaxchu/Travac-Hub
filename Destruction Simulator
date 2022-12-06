@@ -16,41 +16,54 @@ ss:Button("  [+] Spider")
 ss:Button("  [+] Tower of Misery")
 ss:Button("  [+] Destruction Simulator")
  
-mm:Section("   Section") -- Create Section
+mm:Section("   Cash")
  
-mm:Toggle("  Auto Add Money [Inf Money]", function(state)
-    if state then
-        _G.Print = true
-        while _G.Print do
-game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 99999999)
-        wait()
-    end
-    else
-        _G.Print = false
-        end
+mm:Button("  [+]1M", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 1000000)
 end)
 
-mm:Toggle("  Auto Add Level [Max Level]", function(state)
-    if state then
-        _G.Print = true
-        while _G.Print do
-game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 15)
-        wait()
-    end
-    else
-        _G.Print = false
-        end
+mm:Button("  [+]5M", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Coins", 480, 5000000)
 end)
 
-mm:Toggle("  Auto Rank Up", function(state)
-    if state then
-        _G.Print = true
-        while _G.Print do
-			game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 15)
-			game:GetService("ReplicatedStorage").Remotes.rankUp:FireServer()
-        wait()
-    end
-    else
-        _G.Print = false
-        end
+mm:Section("   Level")
+
+mm:Button("  [+]1", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 1)
+end)
+
+mm:Button("  [+]2", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 2)
+end)
+
+mm:Button("  [+]3", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 3)
+end)
+
+mm:Button("  [+]4", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 4)
+end)
+
+mm:Button("  [+]5", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 5)
+end)
+
+mm:Button("  [+]6", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 6)
+end)
+
+mm:Button("  [+]7", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 7)
+end)
+
+mm:Button("  [+]8", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 8)
+end)
+
+mm:Button("  [+]9", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 9)
+end)
+
+mm:Button("  [+]10", function()
+game:GetService("ReplicatedStorage").Remotes.generateBoost:FireServer("Levels", 480, 10)
 end)
