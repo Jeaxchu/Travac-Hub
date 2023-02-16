@@ -18,4 +18,6 @@ elseif game.PlaceId == 2248408710 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Destruction%20Simulator"))()
 elseif game.PlaceId == 5609538200 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Tower%20Of%20Fun"))()
+elseif game.PlaceId == 8568266872 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Kill%20Monster%20To%20Save%20Princess"))()
 end
