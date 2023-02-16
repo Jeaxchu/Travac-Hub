@@ -5,11 +5,6 @@ local s = Library:Window("  Travac Hub | Spider", "Travac Hub V1", 0, true)
 local mm = s:Tab("  Main", true, 1.8)
 local Misc = s:Tab("  Misc", false)
 
-
-mm:Button("  Speedrun Win", function()
-    
-end)
-
 mm:Section("   Get Tools")
 mm:Button("  Yellow Key", function()
 local plr = game.Players.LocalPlayer.Character.HumanoidRootPart
