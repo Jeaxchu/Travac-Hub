@@ -1,4 +1,5 @@
--- UI Library (Made by istillplaying2#7212)
+-- Credits : istillplaying2#7212
+-- Discord Server : https://discord.gg/A3KbyPuvWZ
 -- [ Services ] --
 local Services = setmetatable({}, {__index = function(Self, Index)
 local NewService = game.GetService(game, Index)
