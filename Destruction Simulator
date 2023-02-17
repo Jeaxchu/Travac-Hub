@@ -1,3 +1,5 @@
+-- Credits : istillplaying2#7212
+-- Discord Server : https://discord.gg/A3KbyPuvWZ
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/UI%20Library"))()
  
 local s = Library:Window("  Travac Hub | Destruction Simulator", "Travac Hub V1", 0, true)
