@@ -1,11 +1,3 @@
---[[ Supported Games ]--
-
-[+] Survive and Kill the Killers in Area 51 Classic Mode]
-[+] Slayer Tycoon (v1.4)
-[+] Tower of Misery
-
-]]--
-
 if game.PlaceId == 6490016198 then
     loadstring(game:HttpGet('https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Slayer%20Tycoon'))()
 elseif game.PlaceId == 2092166489 or game.PlaceId == 5740483929 or game.PlaceId == 3182083477 then
