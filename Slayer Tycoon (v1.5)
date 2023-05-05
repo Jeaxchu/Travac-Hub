@@ -81,58 +81,8 @@ end
 
 Rizz_Lines = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Normal%20Rizz"))()
 Peothic_Rizz_Lines = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Peothic%20Rizz"))()
+roastinglist = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/roasting"))()
 
-local placeId = game.PlaceId
-
--- Use the Roblox API to get information about the game
-local success, gameInfo = pcall(function()
-  return game:GetService("MarketplaceService"):GetProductInfo(placeId, Enum.InfoType.Asset)
-end)
-
--- Check if the API call was successful
-if success and gameInfo ~= nil then
-  -- Get the name of the game from the game information
-  local gameName = gameInfo.Name
-
-local DiscordLib =
-    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
-
-local win = DiscordLib:Window("Travac Hub", gameName)
-
-local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
-local chats = win:Server("Chats", "")
-
-local M = serv:Channel("MAIN", "")
-local T = serv:Channel("TELEPORT", "")
-local E = serv:Channel("ESP", "")
-local Mi = serv:Channel("MISC", "")
-local C = serv:Channel("CREDITS", "")
-local NormalRizz = chats:Channel("NORMAL RIZZ")
-local peothicrizz = chats:Channel("PEOTHIC Rizz")
-local BypassChats = serv:Channel("Bypassed Chats")
-
-getgenv().cham = false
-getgenv().nameESP = false
-getgenv().boxESP = false
-
-getgenv().esp_loaded = false
-getgenv().Visibility = false
-
-  local function getOwner()
-	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
-		if v:IsA"Model" and v:FindFirstChild("Owner") then
-			if v.Owner.Value == game.Players.LocalPlayer then
-				return v
-			end
-		end
-	end
-end
-
-  local plr = game.Players.LocalPlayer
-  local function tp(place)
-      plr.Character.HumanoidRootPart.CFrame = place
-  end
-  
 -- I'm not racist because im not the one who use it >w< --
 local swearword_1 = "I have a massive mcock"
 local swearword_01 = "I like a massive mcock"
@@ -178,6 +128,58 @@ local swearword_37 = "Imgonnakms"
 local swearword_38 = "Bigjuicyfemboysthigh"
 local swearword_39 = "youngraptoy"
 local swearword_40 = "negar"
+
+local placeId = game.PlaceId
+
+-- Use the Roblox API to get information about the game
+local success, gameInfo = pcall(function()
+  return game:GetService("MarketplaceService"):GetProductInfo(placeId, Enum.InfoType.Asset)
+end)
+
+-- Check if the API call was successful
+if success and gameInfo ~= nil then
+  -- Get the name of the game from the game information
+  local gameName = gameInfo.Name
+
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+
+local win = DiscordLib:Window("Travac Hub", gameName)
+
+local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+local chats = win:Server("Chats", "")
+
+local M = serv:Channel("MAIN", "")
+local T = serv:Channel("TELEPORT", "")
+local E = serv:Channel("ESP", "")
+local Mi = serv:Channel("MISC", "")
+local C = serv:Channel("CREDITS", "")
+local NormalRizz = chats:Channel("NORMAL RIZZ")
+local peothicrizz = chats:Channel("PEOTHIC Rizz")
+local Roasting = serv:Channel("ROASTING")
+local BypassChats = serv:Channel("Bypassed Chats")
+
+getgenv().cham = false
+getgenv().nameESP = false
+getgenv().boxESP = false
+
+getgenv().esp_loaded = false
+getgenv().Visibility = false
+
+  local function getOwner()
+	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
+		if v:IsA"Model" and v:FindFirstChild("Owner") then
+			if v.Owner.Value == game.Players.LocalPlayer then
+				return v
+			end
+		end
+	end
+end
+
+  local plr = game.Players.LocalPlayer
+  local function tp(place)
+      plr.Character.HumanoidRootPart.CFrame = place
+  end
 
 DiscordLib:Notification("Notification", "Anti Cheat = Deleted, Anti Fall = Executed, Anti Afk = Executed, Scripts = Loaded :3", "Okay!")
 DiscordLib:Notification("Notification", "Bypassed Chat Feature Warning!! Bypassed is ban able and i still can't find a way to make it unbanable i suggest you to use it on alt >w<", "Okay!")
@@ -1033,6 +1035,29 @@ peothicrizz:Button(
     "Click this to rizz",
     function()
         Chat(getgenv().line2)
+    end
+)
+
+local drop =
+    Roasting:Dropdown(
+    "Choose your roast",
+    roastinglist,
+    function(line)
+        getgenv().line2 = tostring(line)
+    end
+)
+
+Roasting:Button(
+    "Click this to roast",
+    function()
+        Chat(getgenv().line2)
+    end
+)
+
+Roasting:Button(
+    "Copy Rizz to clipboard",
+    function()
+        setclipboard(getgenv().line2)
     end
 )
 
