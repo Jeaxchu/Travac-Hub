@@ -1,6 +1,4 @@
-local highlight = Instance.new("Highlight")
-highlight.Name = "Highlight"
------------------------------------------------------------------
+
 --[[
 	Anti Afk [Anti AFK]
 ]]--
@@ -79,9 +77,8 @@ function Chat(message)
     game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message , "All")
 end
 
-Rizz_Lines = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Normal%20Rizz"))()
-Peothic_Rizz_Lines = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/Peothic%20Rizz"))()
-roastinglist = loadstring(game:HttpGet("https://raw.githubusercontent.com/istillplaying2/Travac-Hub/main/roasting"))()
+Rizz_Lines = loadstring(game:HttpGet("https://pastebin.com/raw/yuRdZqur"))()
+Peothic_Rizz_Lines = loadstring(game:HttpGet("https://pastebin.com/raw/nL0tKvkc"))()
 
 -- I'm not racist because im not the one who use it >w< --
 local swearword_1 = "I have a massive mcock"
@@ -156,7 +153,6 @@ local Mi = serv:Channel("MISC", "")
 local C = serv:Channel("CREDITS", "")
 local NormalRizz = chats:Channel("NORMAL RIZZ")
 local peothicrizz = chats:Channel("PEOTHIC Rizz")
-local Roasting = serv:Channel("ROASTING")
 local BypassChats = serv:Channel("Bypassed Chats")
 
 getgenv().cham = false
@@ -165,6 +161,9 @@ getgenv().boxESP = false
 
 getgenv().esp_loaded = false
 getgenv().Visibility = false
+
+local highlight = Instance.new("Highlight")
+highlight.Name = "Highlight"
 
   local function getOwner()
 	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
@@ -1010,7 +1009,7 @@ local drop =
     NormalRizz:Dropdown(
     "Choose your rizz",
     Rizz_Lines,
-    function(line)
+    function()
         getgenv().line2 = tostring(line)
     end
 )
@@ -1035,29 +1034,6 @@ peothicrizz:Button(
     "Click this to rizz",
     function()
         Chat(getgenv().line2)
-    end
-)
-
-local drop =
-    Roasting:Dropdown(
-    "Choose your roast",
-    roastinglist,
-    function(line)
-        getgenv().line2 = tostring(line)
-    end
-)
-
-Roasting:Button(
-    "Click this to roast",
-    function()
-        Chat(getgenv().line2)
-    end
-)
-
-Roasting:Button(
-    "Copy Rizz to clipboard",
-    function()
-        setclipboard(getgenv().line2)
     end
 )
 
