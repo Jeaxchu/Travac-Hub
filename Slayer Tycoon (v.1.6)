@@ -1,0 +1,1370 @@
+
+--[[
+	Anti Afk [Anti AFK]
+]]--
+wait(0.5)local ba=Instance.new("ScreenGui")
+local ca = Instance.new("TextLabel")
+local da = Instance.new("Frame")
+local _b = Instance.new("TextLabel")
+local ab = Instance.new("TextLabel")
+ba.Parent = game.CoreGui
+ba.ZIndexBehavior = Enum.ZIndexBehavior.Sibling;
+ca.Parent=ba;ca.Active=true
+ca.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)
+ca.Draggable=true
+ca.Position=UDim2.new(0.698610067,0,0.098096624,0)
+ca.Size=UDim2.new(0,370,0,52)
+ca.Font=Enum.Font.SourceSansSemibold;
+ca.Text="Anti AFK Script"
+ca.TextColor3=Color3.new(0,1,1)
+ca.TextSize=22;da.Parent=ca
+da.BackgroundColor3=Color3.new(0.196078,0.196078,0.196078)
+da.Position=UDim2.new(0,0,1.0192306,0)
+da.Size=UDim2.new(0,370,0,107)
+da.Visible = false
+ca.Visible = false
+_b.Visible = false
+ab.Visible = false
+_b.Parent=da
+_b.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)_b.Position=UDim2.new(0,0,0.800455689,0)
+_b.Size=UDim2.new(0,370,0,21)_b.Font=Enum.Font.Arial;_b.Text="made by ur mom "
+_b.TextColor3=Color3.new(0,1,1)_b.TextSize=20;ab.Parent=da
+ab.BackgroundColor3=Color3.new(0.176471,0.176471,0.176471)ab.Position=UDim2.new(0,0,0.158377,0)
+ab.Size=UDim2.new(0,370,0,44)ab.Font=Enum.Font.ArialBold;ab.Text="Status: Active"
+ab.TextColor3=Color3.new(0,1,1)ab.TextSize=20;local bb=game:service'VirtualUser'
+game:service'Players'.LocalPlayer.Idled:connect(function()
+bb:CaptureController()bb:ClickButton2(Vector2.new())
+ab.Text="Roblox tried to kick u but i kicked him instead"wait(2)ab.Text="Status : Active"end)
+-----------------------------------------------------------------
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||--
+-----------------------------------------------------------------
+--[[
+	Bypass Anti Cheat [Anti AC]
+]]--
+local anticheat = game.Workspace:FindFirstChild("DirtsAntiExploit")
+if (anticheat) then
+   anticheat:Destroy()
+end
+-----------------------------------------------------------------
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||--
+-----------------------------------------------------------------
+--[[
+	Anti Ragdol [Anti Fall]
+]]--
+local player = game.Players.LocalPlayer
+
+function processState(oldState, newState)
+   local character = player.Character or player.CharacterAdded:Wait()
+   local humanoid = character:WaitForChild("Humanoid")
+   if (newState == Enum.HumanoidStateType.FallingDown or newState == Enum.HumanoidStateType.Ragdoll) then
+       humanoid:ChangeState(Enum.HumanoidStateType.Running)
+   end
+end
+
+function initialize()
+   local character = player.Character or player.CharacterAdded:Wait()
+   local humanoid = character:WaitForChild("Humanoid")
+   humanoid.StateChanged:Connect(processState)
+end
+
+initialize()
+player.CharacterAdded:Connect(initialize)
+-----------------------------------------------------------------
+--|||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||--
+-----------------------------------------------------------------
+
+function Chat(message)
+    game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest:FireServer(message , "All")
+end
+
+Rizz_Lines = loadstring(game:HttpGet("https://pastebin.com/raw/yuRdZqur"))()
+Peothic_Rizz_Lines = loadstring(game:HttpGet("https://pastebin.com/raw/nL0tKvkc"))()
+
+-- I'm not racist because im not the one who use it >w< --
+local swearword_1 = "I have a massive mcock"
+local swearword_01 = "I like a massive mcock"
+local swearword_001 = "I love a massive mcock"
+local swearword_2 = "showmedicknow"
+local swearword_3 = "sellmesextape"
+local swearword_4 = "bigdicksonthefloor"
+local swearword_5 = "cumandwet"
+local swearword_6 = "adoptmesextoy"
+local swearword_7 = "furrysexroleplay"
+local swearword_8 = "givememoresex"
+local swearword_9 = "stickywetcums"
+local swearword_09 = "do you want my stickywetcum?"
+local swearword_10 = "sweatycocks"
+local swearword_010 = "I have a massive sweatycocks"
+local swearword_0010 = "Do you want my sweatycocks?"
+local swearword_11 = "adoptmeanalsex"
+local swearword_12 = "Imgoingtocreaminyourbum"
+local swearword_13 = "@jackoff"
+local swearword_14 = "@fatass"
+local swearword_15 = "furrygayvideosex"
+local swearword_16 = "roughsexonaground"
+local swearword_17 = "gayprisonsex"
+local swearword_18 = "hotprisonsex"
+local swearword_19 = "adoptmesexupdate"
+local swearword_20 = "adoptmesexroleplay"
+local swearword_21 = "adoptmesexworker"
+local swearword_22 = "gaysexxonthefloorr"
+local swearword_23 = "dicke"
+local swearword_24 = "Imgonnaeatyourspueasy"
+local swearword_25 = "smell my vasgina"
+local swearword_26 = "robloxsextutorial"
+local swearword_27 = "@dumass"
+local swearword_30 = "roughbathroomstallsex"
+local swearword_31 = "fagottt"
+local swearword_32 = "@kuminsideme"
+local swearword_33 = "@fvkmyass"
+local swearword_33 = "@myass"
+local swearword_34 = "bitcj"
+local swearword_35 = "@kill yourself"
+local swearword_36 = "Ilikebigbootylantinastwerking"
+local swearword_37 = "Imgonnakms"
+local swearword_38 = "Bigjuicyfemboysthigh"
+local swearword_39 = "youngraptoy"
+local swearword_40 = "negar"
+
+local placeId = game.PlaceId
+
+-- Use the Roblox API to get information about the game
+local success, gameInfo = pcall(function()
+  return game:GetService("MarketplaceService"):GetProductInfo(placeId, Enum.InfoType.Asset)
+end)
+
+-- Check if the API call was successful
+if success and gameInfo ~= nil then
+  -- Get the name of the game from the game information
+  local gameName = gameInfo.Name
+
+local DiscordLib =
+    loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
+
+local win = DiscordLib:Window("Travac Hub", gameName)
+
+local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
+local chats = win:Server("Chats", "")
+
+local M = serv:Channel("MAIN", "")
+local T = serv:Channel("TELEPORT", "")
+local E = serv:Channel("ESP", "")
+local Mi = serv:Channel("MISC", "")
+local C = serv:Channel("CREDITS", "")
+local NormalRizz = chats:Channel("NORMAL RIZZ")
+local peothicrizz = chats:Channel("PEOTHIC Rizz")
+local BypassChats = serv:Channel("Bypassed Chats")
+
+getgenv().cham = false
+getgenv().nameESP = false
+getgenv().boxESP = false
+
+getgenv().esp_loaded = false
+getgenv().Visibility = false
+
+local highlight = Instance.new("Highlight")
+highlight.Name = "Highlight"
+
+  local function getOwner()
+	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
+		if v:IsA"Model" and v:FindFirstChild("Owner") then
+			if v.Owner.Value == game.Players.LocalPlayer then
+				return v
+			end
+		end
+	end
+end
+
+  local plr = game.Players.LocalPlayer
+  local function tp(place)
+      plr.Character.HumanoidRootPart.CFrame = place
+  end
+
+DiscordLib:Notification("Notification", "Anti Cheat = Deleted, Anti Fall = Executed, Anti Afk = Executed, Scripts = Loaded :3", "Okay!")
+DiscordLib:Notification("Notification", "Bypassed Chat Feature Warning!! Bypassed is ban able and i still can't find a way to make it unbanable i suggest you to use it on alt >w<", "Okay!")
+
+M:Toggle(
+    "Auto Farm Woods [No Gamepass]",
+    false,
+    function(GetWoods)
+            if GetWoods then
+        _G.workspacewoods = true
+        while _G.workspacewoods do
+        shared.Enabled = true
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local hatchet = Backpack.Hatchet
+
+        for i,v in pairs(workspace.Map:GetChildren())do
+            if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
+                repeat wait()
+                    char.Humanoid:EquipTool(hatchet)
+                    wait()
+                    hatchet:Activate()
+                    char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
+                until v.Leaves.Transparency == 1
+            end
+        end
+    end
+    else
+        _G.workspacewoods = false
+        shared.Enabled = false
+        end
+    end
+)
+
+M:Toggle(
+    "Auto Farm Woods [Gamepass]",
+    false,
+    function(getgamepasses)
+            if getgamepasses then
+        _G.getplayers = true
+        while _G.getplayers do
+        shared.Enabled = true
+        local plr = game.Players.LocalPlayer
+        local char = plr.Character
+        local Backpack = game.Players.LocalPlayer.Backpack
+        local hatchet = Backpack["Sun Hatchet"]
+
+        for i,v in pairs(workspace.Map:GetChildren())do
+            if v:FindFirstChild("WoodHitPart") and v.Leaves.Transparency == 0 and shared.Enabled then
+                repeat wait()
+                    char.Humanoid:EquipTool(hatchet)
+                    wait()
+                    hatchet:Activate()
+                    char:SetPrimaryPartCFrame(v.WoodHitPart.CFrame)
+                until v.Leaves.Transparency == 1
+            end
+        end
+    end
+    else
+        _G.getplayers = false
+        shared.Enabled = false
+        end
+    end
+)
+
+M:Button(
+    "Auto Get Ore And Woods [Beta]",
+    function()
+    function findResource(name)
+   local parts = game.Workspace:GetDescendants()
+   for index, part in ipairs(parts) do
+       if (part.Name == name and part.CanCollide) then
+           return(part)
+       end
+   end
+   return(nil)
+end
+
+function breakResource(resource, tool)
+   while (resource.Transparency == 0) do
+       tool.Attack:FireServer()
+       wait(0.5)
+   end
+end
+
+function returnResource(resource, oldPosition)
+   resource.CFrame = oldPosition
+end
+
+function bringResource(resource)
+   local hrp = game.Players.LocalPlayer.Character.HumanoidRootPart
+   local oldPosition = resource.CFrame
+   resource.CanCollide = false
+   resource.CFrame = (hrp.CFrame + hrp.CFrame.LookVector * 3)
+   return(oldPosition)
+end
+
+function unequip()
+   local character = game.Players.LocalPlayer.Character
+   local equipped = nil
+   
+   for index, thing in ipairs(character:GetChildren()) do
+       if thing.ClassName == "Tool" then
+           equipped = thing
+       end
+   end
+   
+   character.Humanoid:UnequipTools()
+   return(equipped)
+end
+
+function equip(tool)
+   game.Players.LocalPlayer.Character.Humanoid:EquipTool(tool)
+end
+
+function getResource(resource)
+   local tool = unequip()
+   local pickaxe = game.Players.LocalPlayer.Backpack.Pickaxe
+   local hatchet = game.Players.LocalPlayer.Backpack.Hatchet
+   
+   if (resource == "Rock") then
+       local rock = findResource("RockHitPart")
+       equip(pickaxe)
+       local oldPosition = bringResource(rock)
+       breakResource(rock, pickaxe)
+       returnResource(rock, oldPosition)
+   else
+       local wood = findResource("WoodHitPart")
+       equip(hatchet)
+       local oldPosition = bringResource(wood)
+       breakResource(wood, hatchet)
+       returnResource(wood, oldPosition)
+   end
+   
+   if (tool ~= nil) then
+       equip(tool)
+   else
+       unequip()
+   end
+end
+
+getResource("Rock")
+getResource("Wood")
+end
+)
+
+M:Seperator()
+
+M:Toggle(
+    "1 Hit Npc / Auto Kill Npc [Beta]",
+    false,
+    function(NpcHealth)
+            if NpcHealth then
+        _G.KillNpc = true
+        while _G.KillNpc do
+            for i,v in pairs(game:GetService("Workspace").MobsHolder:GetDescendants()) do
+                if v:IsA"Model" and v.Name == "Slayer1" or v.Name == "Slayer2" or v.Name == "Slayer3" or v.Name == "Slayer4" or v.Name == "Demon1" or v.Name == "Demon2" or v.Name == "Demon3" or v.Name == "Demon4" or v.Name == "Spider Demon" or v.Name == "Shockwave Demon" or v.Name == "Obi Demon" or v.Name == "Sickle Demon" or v.Name == "Biwa Demon" then
+                    v.Humanoid.Health = 0
+                end
+            end
+            for i,v in pairs(game:GetService("Workspace").BossHolder:GetDescendants()) do
+                if v:IsA"Model" and v.Name == "Spider Demon" or v.Name == "Shockwave Demon" or v.Name == "Obi Demon" or v.Name == "Sickle Demon" or v.Name == "Biwa Demon"then
+                    v.Humanoid.Health = 0
+                end
+            end
+        wait(0.1)
+        end
+    else
+        _G.KillNpc = false
+    end
+    end
+)
+
+M:Toggle(
+    "Auto Steal Money",
+    false,
+    function(CollectFunc)
+   if CollectFunc then
+        _G.GetMoney = true
+        while _G.GetMoney do
+            for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
+                if v:IsA"TouchTransmitter" and v.Parent.Name == "Giver" then
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                    wait(0.3)
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                end
+            end
+        wait()
+        end
+    else
+        _G.GetMoney = false
+    end
+    end
+)
+
+M:Toggle(
+    "Auto Build",
+    false,
+    function(Builds)
+   if Builds then
+        _G.GetBaseRR = true
+        while _G.GetBaseRR do
+local player = game.Players.LocalPlayer
+local buying = true
+
+function convertMoney(str)
+   if (string.find(str, "+")) then
+       local letter = string.sub(str, #str-1, #str-1)
+       local amount = tonumber(string.sub(str, 1, #str-2))
+       if (letter == "K") then
+           return(amount * 1000)
+       elseif (letter == "M") then
+           return(amount * 1000000)
+       end
+   else
+       return(tonumber(str))
+   end
+end
+
+function canAfford(button)
+   local cash = convertMoney(player.leaderstats.Cash.Value)
+   local price = tonumber(button.Price.Value)
+   if (cash > price) then
+       return(true)
+   else
+       return(false)
+   end
+end
+
+function touchButton(button)
+   local character = player.Character or player.CharacterAdded:Wait()
+   local humanoidRoot = character:WaitForChild("HumanoidRootPart")
+   firetouchinterest(humanoidRoot, button.Head, 0)
+   wait()
+   firetouchinterest(humanoidRoot, button.Head, 1)
+end
+
+function buyButton(button)
+   if canAfford(button) then
+       touchButton(button)
+   end
+end
+
+function getCheapest(tycoon)
+   local buttons = tycoon.Buttons:GetChildren()
+   local cheapest = nil
+   for index, button in ipairs(buttons) do
+       if (button.Head.Transparency == 0) then
+           if (cheapest ~= nil) then
+               if (button.Price.Value < cheapest.Price.Value) then
+                   cheapest = button
+               end
+           else
+               cheapest = button
+           end
+       end
+   end
+   return(cheapest)
+end
+
+function getTycoon()
+   local tycoons = game.Workspace.TycoonSets.Tycoons:GetChildren()
+   for index, tycoon in ipairs(tycoons) do
+       local owner = tostring(tycoon.Owner.Value)
+       if (owner == player.Name) then
+           return(tycoon)
+       end
+   end
+   return(nil)
+end
+
+while buying do
+   local tycoon = getTycoon()
+   if (tycoon ~= nil) then
+       local button = getCheapest(tycoon)
+       if (button ~= nil) then
+           buyButton(button)
+       else
+           buying = false
+       end        
+   else
+       buying = false
+   end
+   wait(0.25)
+end
+        wait()
+        end
+    else
+        _G.GetBaseRR = false
+        buying = false
+    end
+    end
+)
+
+M:Toggle(
+    "Auto Heal",
+    false,
+    function(Build)
+   if Build then
+        _G.GetMoney = true
+        while _G.GetMoney do
+            local player = game.Players.LocalPlayer
+
+function dequip()
+   for index, part in ipairs(player.Character:GetDescendants()) do
+       if (part.ClassName == "Tool") then
+           player.Character.Humanoid:UnequipTools()
+           return(part)
+       end
+   end
+   return(nil)
+end
+
+function eatfood()
+   for index, part in ipairs(player.Backpack:GetChildren()) do
+       if (part.Name == "Udon" or part.Name == "Bento") then
+           player.Character.Humanoid:EquipTool(part)
+           part.Rem:FireServer()
+           return(nil)
+       end
+   end
+end
+
+function heal()
+   tool = dequip()
+   eatfood()
+   
+   if (tool ~= nil) then
+       player.Character.Humanoid:EquipTool(tool)
+   else
+       player.Character.Humanoid:UnequipTools()
+   end
+end
+
+_G.autoheal = true
+while _G.autoheal do
+   wait()
+   if player.Character then
+       if (player.Character.Humanoid.Health < 95) then
+           heal()
+           wait(2)
+       end
+   end
+end
+        wait()
+        end
+    else
+        _G.GetMoney = false
+    end
+    end
+)
+
+M:Button (
+    "Auto Buy Food",
+    function()
+		local player = game.Players.LocalPlayer
+
+		function teleport(location)
+		   local character = player.Character or player.CharacterAdded:Wait()
+		   local humanoidRoot = character:WaitForChild("HumanoidRootPart")
+		   local previousLocation = humanoidRoot.CFrame
+		   humanoidRoot.CFrame = location
+		   return(previousLocation)
+		end
+		
+		function getFoodLocation(food)
+		   local parts = food:GetDescendants()
+		   for index, part in ipairs(parts) do
+			   if (part.Name == "HumanoidRootPart" or part.Name == "Veggies") then
+				   return(part.CFrame)
+			   end
+		   end
+		end
+		
+		function getProximity(food)
+		   local parts = food:GetDescendants()
+		   for index, part in ipairs(parts) do
+			   if (part.Name == "ProximityPrompt") then
+				   return(part)
+			   end
+		   end
+		end
+		
+		function getFood(food, amount)
+		   local proximity = getProximity(food)
+		   local location = getFoodLocation(food)
+		   local previousLocation = teleport(location)
+		   wait(0.25)
+		   
+		   while (amount > 0) do
+			   fireproximityprompt(proximity, 5)
+			   amount = amount - 1
+		   end
+		   teleport(previousLocation)
+		end
+		
+		function checkFood()
+		   local food = nil
+		   if (game.Workspace:FindFirstChild("BentoMerchant")) then
+			   food = game.Workspace:FindFirstChild("BentoMerchant")
+		   else
+			   local parts = game.Workspace:GetDescendants()
+			   for index, part in ipairs(parts) do
+				   if (part.Name == "Udon Stand") then
+					   food = part
+				   end
+			   end
+		   end
+		   return(food)
+		end
+		
+		local food = checkFood()
+		local amount = 50
+		
+		if (food ~= nil) then
+		   getFood(food, amount)
+		end
+	end
+)
+
+M:Button(
+    "Skill No Cooldown [Beta]",
+    function()
+        local ThrowDebounce = true
+        local player = game.Players.LocalPlayer
+        local debrisService = game:GetService("Debris")
+        local userInputService = game:GetService("UserInputService")
+        local contextActionService = game:GetService("ContextActionService")
+        local RunThrow = true
+
+        function Throw()
+            if RunThrow then
+                local character = player.Character or player.CharacterAdded:Wait()
+                local humanoid = character:WaitForChild("Humanoid")
+                local humanoidRoot = character:WaitForChild("HumanoidRootPart")
+                local animator = humanoid:WaitForChild("Animator")
+                local ThrowAnimation = script:WaitForChild("Anim")
+                local ThrowSound = script:WaitForChild("Throw")
+                local ThrowTrack = animator:LoadAnimation(ThrowAnimation)
+
+                ThrowTrack:Play()
+                ThrowSound:Play()
+                ThrowTrack.Stopped:wait()
+                ThrowDebounce = true
+
+                function replaceScript()
+    local scripts = game:GetService("Workspace").IHaveRizzGenetics
+    local Throw = scripts.Hatchet.Remote
+    local assets = roll:GetChildren()
+    for index, asset in ipairs(assets) do
+        asset.Parent = script
+    end
+    script.Name = "Roll"
+    script.Parent = scripts
+    contextActionService:UnbindAction("Throw")
+    Throw:Destroy()
+end
+function handleInput(userInput, gameProcessed)
+    if not gameProcessed then
+        if (userInput.KeyCode == Enum.KeyCode.E) then
+            spawn(Throw)
+        end
+    end
+end
+replaceScript()
+userInputService.InputBegan:Connect(handleInput)
+            end
+        end
+    end
+)
+
+M:Button(
+    "Run / Dash No CoolDown",
+    function()
+        DiscordLib:Notification("Notification", "Don't run this script for more than once and don't dead or reset because you will won't able to use dash again!! :3 Double Click W to Run and Click Q to Dash", "Okay!")
+        _G.rollStrength = 90
+        _G.runSpeed = 60
+
+local debrisService = game:GetService("Debris")
+local userInputService = game:GetService("UserInputService")
+local contextActionService = game:GetService("ContextActionService")
+local player = game.Players.LocalPlayer
+local rollDebounce = true
+local runDebounce = true
+local runButtonLastPress = 1337
+function roll()
+    if rollDebounce then
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRoot = character:WaitForChild("HumanoidRootPart")
+        local animator = humanoid:WaitForChild("Animator")
+        local rollAnimation = script:WaitForChild("Animation")
+        local rollSound = script:WaitForChild("Roll")
+        local rollTrack = animator:LoadAnimation(rollAnimation)
+        local bodyVelocity = Instance.new("BodyVelocity")
+        rollDebounce = false
+        bodyVelocity.MaxForce = Vector3.new(math.huge, 1000, math.huge)
+        bodyVelocity.Velocity = (humanoidRoot.CFrame.lookVector * _G.rollStrength)
+        bodyVelocity.Parent = humanoidRoot
+        debrisService:AddItem(bodyVelocity, 0.5)
+        rollTrack:Play()
+        rollSound:Play()
+        rollTrack.Stopped:wait()
+        rollDebounce = true
+    end
+end
+function getRunAnimation(character)
+    local runAnimation = script:WaitForChild("RunAnim")
+    local characterChildren = character:GetChildren()
+    for index, part in ipairs(characterChildren) do
+        if part:IsA("Tool") then
+            if (part:FindFirstChild("IsBreath") or part.Name == "Dark Thunder Art" or part.Name == "Rooting Gun Art") then
+                if (part.Name == "Sound Katanas" or part.Name == "Beast Katanas" or part.Name == "Rooting Gun Art") then
+                    runAnimation = script:FindFirstChild("DualRunAnim")
+                else
+                    runAnimation = script:FindFirstChild("SlayerRunAnim")
+                end
+            else
+                runAnimation = script:FindFirstChild("DemonRunAnim")
+            end
+        end
+    end
+    return(runAnimation)
+end
+function run()
+    if runDebounce then
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRoot = character:WaitForChild("HumanoidRootPart")
+        local runSound = script:FindFirstChild("Dash")
+        local runAnimation = getRunAnimation(character)
+        local animator = humanoid:WaitForChild("Animator")
+        local track = animator:LoadAnimation(runAnimation)
+        local particleClone = game.ReplicatedStorage.ModuleAssets:FindFirstChild("SprintParticle"):Clone()
+        runDebounce = false
+        track:Play()
+        humanoid.WalkSpeed = _G.runSpeed
+        particleClone.Parent = humanoidRoot
+        particleClone.Enabled = true
+        debrisService:AddItem(particleClone, 0.5)
+        runSound:Play()
+        wait(0.1)
+        particleClone.Enabled = false
+        while (humanoid.MoveDirection ~= Vector3.new(0, 0, 0)) do
+            wait()
+        end
+        track:Stop()
+        humanoid.WalkSpeed = 16
+        runDebounce = true
+    end
+end
+function replaceScript()
+    local scripts = game:GetService("StarterPlayer").StarterCharacterScripts
+    local roll = scripts:FindFirstChild("Roll")
+    local assets = roll:GetChildren()
+    for index, asset in ipairs(assets) do
+        asset.Parent = script
+    end
+    script.Name = "Roll"
+    script.Parent = scripts
+    contextActionService:UnbindAction("Roll")
+    roll:Destroy()
+end
+function handleInput(userInput, gameProcessed)
+    if not gameProcessed then
+        if (userInput.KeyCode == Enum.KeyCode.Q) then
+            spawn(roll)
+        elseif (userInput.KeyCode == Enum.KeyCode.W) then
+            if ((tick() - runButtonLastPress) <= 0.25) then
+                spawn(run)
+            end
+            runButtonLastPress = tick()
+        end
+    end
+end
+replaceScript()
+userInputService.InputBegan:Connect(handleInput)
+    end
+)
+
+local changefast =
+    M:Slider(
+    "Run Speed",
+    0,
+    400,
+    60,
+    function(t)
+        _G.runSpeed = t
+    end
+)
+
+T:Button (
+    "Teleport Home",
+    function()
+    tycoons = game.Workspace.TycoonSets.Tycoons:GetChildren()
+for index, tycoon in ipairs(tycoons) do
+   if (tostring(tycoon.Owner.Value) == game.Players.LocalPlayer.Name) then
+       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = tycoon.Essentials.Spawn.CFrame
+   end
+end
+    end
+)
+
+T:Button(
+	"Rice Fields",
+	function()
+        tp(game:GetService("Workspace").TycoonSets.Tycoons["Rice Fields."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Button(
+	"Grasslands",
+	function()
+		tp(game:GetService("Workspace").TycoonSets.Tycoons.Grasslands.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Button(
+	"Forest",
+	function()
+		tp(game:GetService("Workspace").TycoonSets.Tycoons.Forest.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Button(
+	"Wisteria Forest",
+	function()
+		tp(game:GetService("Workspace").TycoonSets.Tycoons["Wisteria Forest."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Button(
+	"Mountains",
+	function()
+		tp(game:GetService("Workspace").TycoonSets.Tycoons.Mountains.Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Button(
+	"Winter Woods",
+	function()
+        tp(game:GetService("Workspace").TycoonSets.Tycoons["Winter Woods."].Essentials.Spawn.CFrame * CFrame.new(0,3,0))
+	end
+)
+
+T:Seperator()
+
+T:Button(
+	"Style Sensei",
+	function()
+		tp(game:GetService("Workspace").StyleSensei.HumanoidRootPart.CFrame)
+	end
+)
+
+T:Button(
+	"Muzan",
+	function()
+		game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1182, 354, 3782)
+	end
+)
+
+E:Toggle(
+    "Visual",
+    getgenv().Visibility,
+    function(Value)
+      if getgenv().esp_loaded == false and Value == true then
+            getgenv().esp_loaded = true
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/A_simple_esp.lua", true))()
+        end
+        getgenv().Visibility = Value
+    end
+)
+
+E:Toggle(
+    "Box Esp",
+    getgenv().Visibility,
+    function(Value)
+     if getgenv().esp_loaded == false and Value == true then
+            getgenv().esp_loaded = true
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/A_simple_esp.lua", true))()
+        end
+        getgenv().boxESP = Value
+    end
+)
+
+E:Toggle(
+    "Name",
+    getgenv().Visibility,
+    function(Value)
+     if getgenv().esp_loaded == false and Value == true then
+            getgenv().esp_loaded = true
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/A_simple_esp.lua", true))()
+        end
+        getgenv().nameESP = Value
+    end
+)
+
+E:Toggle(
+    "Highlights",
+    getgenv().Visibility,
+    function(Value)
+    if getgenv().esp_loaded == false and Value == true then
+            getgenv().esp_loaded = true
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/skatbr/Roblox-Releases/main/A_simple_esp.lua", true))()
+        end
+        getgenv().cham = Value
+    end
+)
+
+E:Toggle(
+    "Team Color",
+    getgenv().Visibility,
+    function(Value)
+    getgenv().useTeamColor = Value
+    end
+)
+
+Mi:Button(
+    "Bypass Wisteria Trees",
+    function(RemoveTheBitches)
+        DiscordLib:Notification("Notification", "Run this again if someone just bought the wisteria tree's", "Okay!")
+		for i,v in pairs(workspace.TycoonSets.Tycoons:GetDescendants()) do
+			if v:IsA"Model" and v.Name == "Lasers" then
+				wait()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+				v:Destroy()
+			end
+		end
+    end
+)
+
+Mi:Button(
+    "Aimbot",
+    function()
+        --> variables
+local UIS = game:GetService("UserInputService")
+local camera = game.Workspace.CurrentCamera
+--> getting the closest player
+function getClosest()
+local closestPlayer = nil
+local closesDist = math.huge
+for i,v in pairs(game.Players:GetPlayers()) do
+if v ~= game.Players.LocalPlayer then
+local Dist = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).magnitude
+if Dist < closesDist then
+closesDist = Dist
+closestPlayer = v
+end
+end
+end
+return closestPlayer
+end
+
+--> starting the aimbot
+_G.aim = false
+UIS.InputBegan:Connect(function(inp)
+    if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+    _G.aim = true
+    while wait() do
+        camera.CFrame = CFrame.new(camera.CFrame.Position,getClosest().Character.Head.Position)
+        if _G.aim == false then return end
+    end
+    end
+end)
+--> ending the aimbot
+UIS.InputEnded:Connect(function(inp)
+    if inp.UserInputType == Enum.UserInputType.MouseButton2 then
+    _G.aim = false
+    end
+end)
+    end
+)
+
+Mi:Button(
+    "Inf Jump",
+    function()
+        local InfiniteJumpEnabled = true
+        game:GetService("UserInputService").JumpRequest:connect(function()
+            if InfiniteJumpEnabled then
+                game:GetService("Players").LocalPlayer.Character:FindFirstChildOfClass('Humanoid'):ChangeState("Jumping")
+            end
+        end)
+    end
+)
+
+C:Label(
+    "Script : Travac Hub"
+)
+
+C:Label(
+    "UI : Discord Library"
+)
+
+C:Button(
+    "Build Date : 20/8/2022 (v1.4)"
+)
+
+C:Button(
+    "Updated : 24/4/2023 (v1.5)"
+)
+
+C:Button(
+    "Crush my head with your thicc thigh please :3"
+)
+
+local drop =
+    NormalRizz:Dropdown(
+    "Choose your rizz",
+    Rizz_Lines,
+    function()
+        getgenv().line2 = tostring(line)
+    end
+)
+
+NormalRizz:Button(
+    "Click this to rizz",
+    function()
+        Chat(getgenv().line2)
+    end
+)
+
+local drop =
+    peothicrizz:Dropdown(
+    "Choose your rizz",
+    Peothic_Rizz_Lines,
+    function(line)
+        getgenv().line2 = tostring(line)
+    end
+)
+
+peothicrizz:Button(
+    "Click this to rizz",
+    function()
+        Chat(getgenv().line2)
+    end
+)
+
+BypassChats:Label("List of bypassed words")
+
+BypassChats:Button(
+    swearword_1,
+    function()
+        Chat(swearword_1)
+        setclipboard(swearword_1)
+    end
+)
+
+BypassChats:Button(
+    swearword_01,
+    function()
+        Chat(swearword_01)
+        setclipboard(swearword_01)
+    end
+)
+
+BypassChats:Button(
+    swearword_001,
+    function()
+        Chat(swearword_001)
+        setclipboard(swearword_001)
+    end
+)
+
+BypassChats:Button(
+    swearword_2,
+    function()
+        Chat(swearword_2)
+        setclipboard(swearword_2)
+    end
+)
+
+BypassChats:Button(
+    swearword_3,
+    function()
+        Chat(swearword_3)
+        setclipboard(swearword_3)
+    end
+)
+
+BypassChats:Button(
+    swearword_4,
+    function()
+        Chat(swearword_4)
+        setclipboard(swearword_4)
+    end
+)
+
+BypassChats:Button(
+    swearword_5,
+    function()
+        Chat(swearword_5)
+        setclipboard(swearword_5)
+    end
+)
+
+BypassChats:Button(
+    swearword_6,
+    function()
+        Chat(swearword_6)
+        setclipboard(swearword_6)
+    end
+)
+
+BypassChats:Button(
+    swearword_7,
+    function()
+        Chat(swearword_7)
+        setclipboard(swearword_7)
+    end
+)
+
+BypassChats:Button(
+    swearword_8,
+    function()
+        Chat(swearword_8)
+        setclipboard(swearword_8)
+    end
+)
+
+BypassChats:Button(
+    swearword_9,
+    function()
+        Chat(swearword_9)
+        setclipboard(swearword_9)
+    end
+)
+
+BypassChats:Button(
+    swearword_10,
+    function()
+        Chat(swearword_10)
+        setclipboard(swearword_10)
+    end
+)
+
+BypassChats:Button(
+    swearword_010,
+    function()
+        Chat(swearword_010)
+        setclipboard(swearword_010)
+    end
+)
+
+BypassChats:Button(
+    swearword_0010,
+    function()
+        Chat(swearword_0010)
+        setclipboard(swearword_0010)
+    end
+)
+
+BypassChats:Button(
+    swearword_11,
+    function()
+        Chat(swearword_11)
+        setclipboard(swearword_11)
+    end
+)
+
+BypassChats:Button(
+    swearword_12,
+    function()
+        Chat(swearword_12)
+        setclipboard(swearword_12)
+    end
+)
+
+BypassChats:Button(
+    swearword_13,
+    function()
+        Chat(swearword_13)
+        setclipboard(swearword_13)
+    end
+)
+
+BypassChats:Button(
+    swearword_14,
+    function()
+        Chat(swearword_14)
+        setclipboard(swearword_14)
+    end
+)
+
+BypassChats:Button(
+    swearword_15,
+    function()
+        Chat(swearword_15)
+        setclipboard(swearword_15)
+    end
+)
+
+BypassChats:Button(
+    swearword_16,
+    function()
+        Chat(swearword_16)
+        setclipboard(swearword_16)
+    end
+)
+
+BypassChats:Button(
+    swearword_17,
+    function()
+        Chat(swearword_17)
+        setclipboard(swearword_17)
+    end
+)
+
+BypassChats:Button(
+    swearword_18,
+    function()
+        Chat(swearword_18)
+        setclipboard(swearword_18)
+    end
+)
+
+BypassChats:Button(
+    swearword_19,
+    function()
+        Chat(swearword_19)
+        setclipboard(swearword_18)
+    end
+)
+
+BypassChats:Button(
+    swearword_20,
+    function()
+        Chat(swearword_20)
+        setclipboard(swearword_18)
+    end
+)
+
+BypassChats:Button(
+    swearword_21,
+    function()
+        Chat(swearword_21)
+        setclipboard(swearword_21)
+    end
+)
+
+BypassChats:Button(
+    swearword_22,
+    function()
+        Chat(swearword_22)
+        setclipboard(swearword_22)
+    end
+)
+
+BypassChats:Button(
+    swearword_23,
+    function()
+        Chat(swearword_23)
+        setclipboard(swearword_23)
+    end
+)
+
+BypassChats:Button(
+    swearword_24,
+    function()
+        Chat(swearword_24)
+        setclipboard(swearword_24)
+    end
+)
+
+BypassChats:Button(
+    swearword_25,
+    function()
+        Chat(swearword_25)
+        setclipboard(swearword_25)
+    end
+)
+
+BypassChats:Button(
+    swearword_26,
+    function()
+        Chat(swearword_26)
+        setclipboard(swearword_26)
+    end
+)
+
+BypassChats:Button(
+    swearword_27,
+    function()
+        Chat(swearword_27)
+        setclipboard(swearword_27)
+    end
+)
+
+BypassChats:Button(
+    swearword_30,
+    function()
+        Chat(swearword_30)
+        setclipboard(swearword_30)
+    end
+)
+
+BypassChats:Button(
+    swearword_31,
+    function()
+        Chat(swearword_31)
+        setclipboard(swearword_31)
+    end
+)
+
+BypassChats:Button(
+    swearword_32,
+    function()
+        Chat(swearword_32)
+        setclipboard(swearword_32)
+    end
+)
+
+BypassChats:Button(
+    swearword_34,
+    function()
+        Chat(swearword_34)
+        setclipboard(swearword_34)
+    end
+)
+
+BypassChats:Button(
+    swearword_35,
+    function()
+        Chat(swearword_35)
+        setclipboard(swearword_35)
+    end
+)
+
+BypassChats:Button(
+    swearword_36,
+    function()
+        Chat(swearword_36)
+        setclipboard(swearword_36)
+    end
+)
+
+BypassChats:Button(
+    swearword_37,
+    function()
+        Chat(swearword_37)
+        setclipboard(swearword_37)
+    end
+)
+
+BypassChats:Button(
+    swearword_38,
+    function()
+        Chat(swearword_38)
+        setclipboard(swearword_38)
+    end
+)
+
+BypassChats:Button(
+    swearword_39,
+    function()
+        Chat(swearword_39)
+        setclipboard(swearword_39)
+    end
+)
+
+BypassChats:Button(
+    swearword_40,
+    function()
+        Chat(swearword_40)
+        setclipboard(swearword_40)
+    end
+)
+
+end
