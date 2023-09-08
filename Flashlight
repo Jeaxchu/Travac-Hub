@@ -1,0 +1,82 @@
+-- Game : Flashlight
+-- Feature : Esp Highlight (High quality esp)
+
+local Teams = game:GetService("Teams")
+local Players = game:GetService("Players")
+local RunService = game:GetService("RunService")
+
+local toolName = "f1"
+
+local function applyHighlight(player)
+    local character = player.Character
+    if character then
+        local highlight = Instance.new("Highlight")
+        local billboard = Instance.new("BillboardGui")
+        highlight.Name = "Highlight"
+        highlight.Parent = character
+        billboard.Name = "UsernameBillboard"
+        billboard.Adornee = player.Character:FindFirstChild("Head")
+        billboard.Size = UDim2.new(0, 100, 0, 50)
+        billboard.StudsOffset = Vector3.new(0, 2, 0)
+        billboard.AlwaysOnTop = true
+
+        local textLabel = Instance.new("TextLabel")
+        textLabel.BackgroundTransparency = 1
+        textLabel.Size = UDim2.new(1, 0, 1, 0)
+        textLabel.Text = player.Name
+        textLabel.Font = Enum.Font.GothamBold
+        textLabel.TextSize = 15
+        textLabel.Parent = billboard
+
+        billboard.Parent = game:GetService("Workspace")
+
+        local toolInModel = character:FindFirstChild(toolName)
+        if toolInModel then
+
+            highlight.FillColor = Color3.new(1, 0, 0)  -- Red if tool is in player model
+            highlight.OutlineColor = Color3.new(1, 0, 0)
+            textLabel.TextColor3 = Color3.new(1, 0, 0)
+            highlight.FillTransparency = 0.8
+        else
+            highlight.FillColor = Color3.new(0, 0, 1)  -- Blue if tool is not in player model
+            highlight.OutlineColor = Color3.new(0, 0, 1)
+            textLabel.TextColor3 = Color3.new(0, 0, 1)
+            highlight.FillTransparency = 0.8
+        end
+    end
+end
+
+local function onPlayerAdded(player)
+    player.CharacterAdded:Connect(function()
+        applyHighlight(player)
+    end)
+end
+
+for _, player in pairs(Players:GetPlayers()) do
+    applyHighlight(player)
+end
+
+Players.PlayerAdded:Connect(onPlayerAdded)
+
+RunService.RenderStepped:Connect(function()
+    for _, player in pairs(Players:GetPlayers()) do
+        local character = player.Character
+        local highlight = character and character:FindFirstChild("Highlight")
+        if highlight then
+            local toolInModel = character:FindFirstChild(toolName)
+            if toolInModel then
+                highlight.FillColor = Color3.new(1, 0, 0)  -- Red if tool is in player model
+                highlight.OutlineColor = Color3.new(1, 0, 0)
+                textLabel.TextColor3 = Color3.new(1, 0, 0)
+                textLabel.Text = "Tagger"
+                highlight.FillTransparency = 0.8
+            else
+                highlight.FillColor = Color3.new(0, 0, 1)  -- Blue if tool is not in player model
+                highlight.OutlineColor = Color3.new(0, 0, 1)
+                textLabel.TextColor3 = Color3.new(0, 0, 1)
+                textLabel.Text = player.Name
+                highlight.FillTransparency = 0.8
+            end
+        end
+    end
+end)
