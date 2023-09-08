@@ -1,0 +1,61 @@
+--------------------------------------------------------------------------------------------
+--esp--
+local Workspace = game:GetService("Workspace")
+
+local function applyHighlight(part)
+    local highlight = part:FindFirstChild("Highlight")
+    if not highlight then
+        highlight = Instance.new("Highlight")
+        highlight.Name = "Highlight"
+        highlight.Parent = part
+    end
+
+    highlight.FillColor = Color3.new(0, 1, 0)
+    highlight.OutlineColor = Color3.new(0, 1, 0)
+end
+
+local function onPartAdded(part)
+    if part:IsA("BasePart") and part.Name == "BatteryPickup" or part.Name == "BasementDoor" then
+        applyHighlight(part)
+    end
+end
+
+for _, part in pairs(Workspace:GetDescendants()) do
+    if part:IsA("BasePart") and part.Name == "BatteryPickup" or part.Name == "BasementDoor" then
+        applyHighlight(part)
+    end
+end
+
+Workspace.DescendantAdded:Connect(function(child)
+    if child:IsA("BasePart") and child.Name == "BatteryPickup" or part.Name == "BasementDoor"  then
+        applyHighlight(child)
+    end
+end)
+--------------------------------------------------------------------------------------------------------------
+--safezone--
+-- Configuration
+local SafeZonePath = game:GetService("Workspace").SafeZones -- Replace with the actual path to "SafeZones"
+local TeleportHeight = 2 -- Height above the player's head to teleport the "SafeZone"
+local TeleportInterval = 1 -- Interval in seconds between teleportations
+
+local player = game.Players.LocalPlayer
+
+local function teleportSafeZoneToPlayer()
+    local character = player.Character
+    if character and character:IsA("Model") then
+        local head = character:FindFirstChild("Head")
+        if head and head:IsA("BasePart") then
+            local SafeZone = SafeZonePath:FindFirstChild("SafeZone")
+            if SafeZone and SafeZone:IsA("BasePart") then
+                local newPosition = head.Position + Vector3.new(0, TeleportHeight, 0)
+                SafeZone.CFrame = CFrame.new(newPosition)
+            end
+        end
+    end
+end
+
+while true do
+    teleportSafeZoneToPlayer()
+    wait(TeleportInterval)
+end
+-------------------------------------------------------------------------------------------------------------------------------------
