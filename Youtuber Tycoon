@@ -34,6 +34,11 @@ local function getOwner()
 	end
 end
 
+local plr = game.Players.LocalPlayer
+local function tp(place)
+    plr.Character.HumanoidRootPart.CFrame = place
+end
+
 -- MAIN
 
 M:Toggle(
