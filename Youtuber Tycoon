@@ -1,19 +1,28 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Jeaxchu/Travac-Hub/refs/heads/main/Youtuber%20Tycoon"))()
+local placeId = game.PlaceId
+
+-- Use the Roblox API to get information about the game
+local success, gameInfo = pcall(function()
+  return game:GetService("MarketplaceService"):GetProductInfo(placeId, Enum.InfoType.Asset)
+end)
+
+-- Check if the API call was successful
+if success and gameInfo ~= nil then
+  -- Get the name of the game from the game information
+  local gameName = gameInfo.Name
 
 local DiscordLib =
     loadstring(game:HttpGet "https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/discord")()
 
-local win = DiscordLib:Window("Nishinji", "Youtuber Tycoon")
+local win = DiscordLib:Window("Nishinji Hub", gameName)
 
 local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
 
 local M = serv:Channel("MAIN", "")
-local E = serv:Channel("ESP", "")
 
--- SETTING
+-- SETTINGS
 
 local function getOwner()
-	for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
+	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
 		if v:IsA"Model" and v:FindFirstChild("Owner") then
 			if v.Owner.Value == game.Players.LocalPlayer then
 				return v
@@ -27,104 +36,39 @@ local function tp(place)
     plr.Character.HumanoidRootPart.CFrame = place
 end
 
--- MAIN
+-- TOGGLE / BUTTONS
 
 M:Toggle(
-    "Auto Build",
+    "Auto Steal [VIP ONLY]",
     false,
-    function(Builds)
-   if Builds then
-        _G.GetBaseRR = true
-        while _G.GetBaseRR do
-local player = game.Players.LocalPlayer
-local buying = true
-
-function convertMoney(str)
-   if (string.find(str, "+")) then
-       local letter = string.sub(str, #str-1, #str-1)
-       local amount = tonumber(string.sub(str, 1, #str-2))
-       if (letter == "K") then
-           return(amount * 1000)
-       elseif (letter == "M") then
-           return(amount * 1000000)
-       end
-   else
-       return(tonumber(str))
-   end
-end
-
-function canAfford(button)
-   local cash = convertMoney(player.leaderstats.Cash.Value)
-   local price = tonumber(button.ButtonPart.Gui.Frame.PriceLabel.Text)
-   if (cash > price) then
-       return(true)
-   else
-       return(false)
-   end
-end
-
-function touchButton(button)
-   local character = player.Character or player.CharacterAdded:Wait()
-   local humanoidRoot = character:WaitForChild("HumanoidRootPart")
-   firetouchinterest(humanoidRoot, button.Head, 0)
-   wait()
-   firetouchinterest(humanoidRoot, button.Head, 1)
-end
-
-function buyButton(button)
-   if canAfford(button) then
-       touchButton(button)
-   end
-end
-
-function getCheapest(tycoon)
-   local buttons = tycoon.Buttons:GetChildren()
-   local cheapest = nil
-   for index, button in ipairs(buttons) do
-       if (button.Head.Transparency == 0) then
-           if (cheapest ~= nil) then
-               if (button.Price.Value < cheapest.Price.Value) then
-                   cheapest = button
-               end
-           else
-               cheapest = button
-           end
-       end
-   end
-   return(cheapest)
-end
-
-function getTycoon()
-   local tycoons = game.Workspace.Tycoons:GetChildren()
-   for index, tycoon in ipairs(tycoons) do
-       local owner = tostring(tycoon.Values.Owner.Value)
-       if (owner == player.Name) then
-           return(tycoon)
-       end
-   end
-   return(nil)
-end
-
-while buying do
-   local tycoon = getTycoon()
-   if (tycoon ~= nil) then
-       local button = getCheapest(tycoon)
-       if (button ~= nil) then
-           buyButton(button)
-       else
-           buying = false
-       end        
-   else
-       buying = false
-   end
-   wait(0.25)
-end
+    function(CollectFunc)
+   if CollectFunc then
+        _G.GetMoney = true
+        while _G.GetMoney do
+            for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
+                if v:IsA"TouchTransmitter" and v.Parent.Name == "ButtonPart" then
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
+                    wait(0.3)
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
+                end
+            end
         wait()
         end
     else
-        _G.GetBaseRR = false
-        buying = false
+        _G.GetMoney = false
     end
     end
 )
+
+M:Button(
+    "Delete Laser Door",
+    function()
+        for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
+            if v:IsA"Model" and v:FindFirstChild("Lasers") then
+                    v:Destroy()
+            end
+        end
+    end
+)
+
 end
