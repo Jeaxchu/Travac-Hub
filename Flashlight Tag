@@ -6,13 +6,12 @@ local Players = game:GetService("Players")
 local RunService = game:GetService("RunService")
 
 local toolName = "f1"
-local highlightUpdateInterval = 1 -- Update every second
 
 -- Function to apply highlight and billboard to a player
 local function applyHighlight(player)
     local character = player.Character
     if character then
-        -- Create Highlight
+        -- Create or get existing Highlight
         local highlight = character:FindFirstChild("Highlight")
         if not highlight then
             highlight = Instance.new("Highlight")
@@ -20,7 +19,7 @@ local function applyHighlight(player)
             highlight.Parent = character
         end
 
-        -- Create BillboardGui for username display
+        -- Create or get existing BillboardGui for username display
         local billboard = character:FindFirstChild("UsernameBillboard")
         if not billboard then
             billboard = Instance.new("BillboardGui")
@@ -62,6 +61,19 @@ local function onCharacterAdded(character)
     local player = Players:GetPlayerFromCharacter(character)
     if player then
         applyHighlight(player)
+
+        -- Connect to the ChildAdded and ChildRemoved events for tools
+        character.ChildAdded:Connect(function(child)
+            if child.Name == toolName then
+                applyHighlight(player) -- Reapply highlight when the tool is added
+            end 
+        end)
+
+        character.ChildRemoved:Connect(function(child)
+            if child.Name == toolName then 
+                applyHighlight(player) -- Reapply highlight when the tool is removed 
+            end 
+        end)
     end
 end
 
@@ -83,15 +95,17 @@ end
 -- Connect new players joining the game
 Players.PlayerAdded:Connect(onPlayerAdded)
 
--- Controlled loop to update highlights at intervals
-while true do
-    for _, player in pairs(Players:GetPlayers()) do
-        local character = player.Character
+-- Coroutine to periodically check for highlights and reapply as needed.
+coroutine.wrap(function()
+    while true do
+        wait(1) -- Check every second
         
-        if character then 
-            applyHighlight(player) -- Reapply highlight to ensure it is up-to-date 
+        for _, player in pairs(Players:GetPlayers()) do
+            local character = player.Character
+            
+            if character then 
+                applyHighlight(player) -- Reapply highlight to ensure it is up-to-date 
+            end 
         end 
     end 
-
-    wait(highlightUpdateInterval) -- Wait before the next update cycle 
-end 
+end)()
