@@ -67,7 +67,7 @@ end
 
 function canAfford(button)
    local cash = convertMoney(player.leaderstats.Cash.Value)
-   local price = tonumber(button.Price.Value)
+   local price = tonumber(buttons.ButtonPart.Gui.Frame.PriceLabel)
    if (cash > price) then
        return(true)
    else
