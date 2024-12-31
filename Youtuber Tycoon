@@ -19,8 +19,6 @@ local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
 
 local M = serv:Channel("MAIN", "")
 
-DiscordLib:Notification("Notification", "Nishinji Nigger Porn Hub", "GET OUT!")
-
 -- SETTINGS
 
 local function getOwner()
