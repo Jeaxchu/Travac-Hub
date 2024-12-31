@@ -1,3 +1,5 @@
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Jeaxchu/Travac-Hub/refs/heads/main/Youtuber%20Tycoon"))()
+
 local placeId = game.PlaceId
 
 -- Use the Roblox API to get information about the game
@@ -19,6 +21,18 @@ local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
 
 local M = serv:Channel("MAIN", "")
 local E = serv:Channel("ESP", "")
+
+-- SETTING
+
+local function getOwner()
+	for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
+		if v:IsA"Model" and v:FindFirstChild("Owner") then
+			if v.Owner.Value == game.Players.LocalPlayer then
+				return v
+			end
+		end
+	end
+end
 
 -- MAIN
 
