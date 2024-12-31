@@ -7,15 +7,19 @@ local RunService = game:GetService("RunService")
 
 local toolName = "f1"
 
+-- Function to apply highlight and billboard to a player
 local function applyHighlight(player)
     local character = player.Character
     if character then
+        -- Create Highlight
         local highlight = Instance.new("Highlight")
-        local billboard = Instance.new("BillboardGui")
         highlight.Name = "Highlight"
         highlight.Parent = character
+
+        -- Create BillboardGui for username display
+        local billboard = Instance.new("BillboardGui")
         billboard.Name = "UsernameBillboard"
-        billboard.Adornee = player.Character:FindFirstChild("Head")
+        billboard.Adornee = character:FindFirstChild("Head")
         billboard.Size = UDim2.new(0, 100, 0, 50)
         billboard.StudsOffset = Vector3.new(0, 2, 0)
         billboard.AlwaysOnTop = true
@@ -30,9 +34,9 @@ local function applyHighlight(player)
 
         billboard.Parent = game:GetService("Workspace")
 
+        -- Set highlight colors based on tool presence
         local toolInModel = character:FindFirstChild(toolName)
         if toolInModel then
-
             highlight.FillColor = Color3.new(1, 0, 0)  -- Red if tool is in player model
             highlight.OutlineColor = Color3.new(1, 0, 0)
             textLabel.TextColor3 = Color3.new(1, 0, 0)
@@ -46,37 +50,83 @@ local function applyHighlight(player)
     end
 end
 
-local function onPlayerAdded(player)
-    player.CharacterAdded:Connect(function()
+-- Function to handle when a player's character is added or respawned
+local function onCharacterAdded(character)
+    local player = Players:GetPlayerFromCharacter(character)
+    if player then
         applyHighlight(player)
-    end)
+
+        -- Reapply highlights on tool changes or updates
+        character.ChildAdded:Connect(function(child)
+            if child.Name == toolName then
+                local highlight = character:FindFirstChild("Highlight")
+                if highlight then 
+                    highlight.FillColor = Color3.new(1, 0, 0) -- Red for tagger
+                    highlight.OutlineColor = Color3.new(1, 0, 0)
+                end 
+            end 
+        end)
+
+        character.ChildRemoved:Connect(function(child)
+            if child.Name == toolName then 
+                local highlight = character:FindFirstChild("Highlight")
+                if highlight then 
+                    highlight.FillColor = Color3.new(0, 0, 1) -- Blue for normal players 
+                    highlight.OutlineColor = Color3.new(0, 0, 1)
+                end 
+            end 
+        end)
+    end
 end
 
+-- Function to handle when a player joins the game
+local function onPlayerAdded(player)
+    player.CharacterAdded:Connect(onCharacterAdded)
+
+    -- Apply highlight immediately if the player already has a character (for existing players)
+    if player.Character then
+        applyHighlight(player)
+    end
+end
+
+-- Connect existing players and their characters at startup
 for _, player in pairs(Players:GetPlayers()) do
-    applyHighlight(player)
+    onPlayerAdded(player)
 end
 
+-- Connect new players joining the game
 Players.PlayerAdded:Connect(onPlayerAdded)
 
+-- Update highlights every frame based on tool presence and update text label accordingly.
 RunService.RenderStepped:Connect(function()
     for _, player in pairs(Players:GetPlayers()) do
         local character = player.Character
         local highlight = character and character:FindFirstChild("Highlight")
+
         if highlight then
             local toolInModel = character:FindFirstChild(toolName)
+            local billboard = character:FindFirstChild("UsernameBillboard")
+            local textLabel = billboard and billboard:FindFirstChild("TextLabel")
+
             if toolInModel then
-                highlight.FillColor = Color3.new(1, 0, 0)  -- Red if tool is in player model
+                highlight.FillColor = Color3.new(1, 0, 0) -- Red if tool is in player model
                 highlight.OutlineColor = Color3.new(1, 0, 0)
-                textLabel.TextColor3 = Color3.new(1, 0, 0)
-                textLabel.Text = "Tagger"
-                highlight.FillTransparency = 0.8
-            else
-                highlight.FillColor = Color3.new(0, 0, 1)  -- Blue if tool is not in player model
+
+                if textLabel then 
+                    textLabel.TextColor3 = Color3.new(1, 0, 0) -- Red for tagger 
+                    textLabel.Text = "Tagger"
+                end
+                
+            else 
+                highlight.FillColor = Color3.new(0, 0, 1) -- Blue if tool is not in player model
                 highlight.OutlineColor = Color3.new(0, 0, 1)
-                textLabel.TextColor3 = Color3.new(0, 0, 1)
-                textLabel.Text = player.Name
-                highlight.FillTransparency = 0.8
-            end
-        end
-    end
+
+                if textLabel then 
+                    textLabel.TextColor3 = Color3.new(0, 0, 1) -- Blue for normal players 
+                    textLabel.Text = player.Name 
+                end 
+            end 
+        end 
+    end 
 end)
+
