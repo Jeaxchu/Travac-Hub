@@ -38,5 +38,3 @@ local plr = game.Players.LocalPlayer
 local function tp(place)
     plr.Character.HumanoidRootPart.CFrame = place
 end
-
-end
