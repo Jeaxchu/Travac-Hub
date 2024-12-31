@@ -19,10 +19,12 @@ local serv = win:Server("Main", "http://www.roblox.com/asset/?id=6031075938")
 
 local M = serv:Channel("MAIN", "")
 
+DiscordLib:Notification("Notification", "Nishinji Nigger Porn Hub")
+
 -- SETTINGS
 
 local function getOwner()
-	for i,v in pairs(game:GetService("Workspace").TycoonSets.Tycoons:GetDescendants()) do
+	for i,v in pairs(game:GetService("Workspace").Tycoon.Tycoons:GetDescendants()) do
 		if v:IsA"Model" and v:FindFirstChild("Owner") then
 			if v.Owner.Value == game.Players.LocalPlayer then
 				return v
@@ -39,10 +41,37 @@ end
 -- TOGGLE / BUTTONS
 
 M:Toggle(
+    "Auto Collect",
+    false,
+    function(Collect)
+        if Collect then
+            _G.Collect = true
+            -- Continuous loop to collect money
+            while _G.Collect do
+                for _, tycoon in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
+                    if tycoon:IsA("Model") and tycoon:FindFirstChild("Owner") then
+                        if tycoon.Owner.Value == game.Players.LocalPlayer then
+                            -- Assuming there's a method to collect money from the tycoon model
+                            if tycoon:FindFirstChild("Money") then
+                                -- Replace 'CollectMoney' with the actual method to collect money
+                                tycoon.Money:CollectMoney() 
+                            end
+                        end
+                    end
+                end
+                wait(1) -- Adjust wait time as necessary to prevent overloading the server
+            end
+        else
+            _G.Collect = false -- Stop collecting when toggled off
+        end
+    end
+)
+
+M:Toggle(
     "Auto Steal [VIP ONLY]",
     false,
-    function(CollectFunc)
-   if CollectFunc then
+    function(Steal)
+   if Steal then
         _G.GetMoney = true
         while _G.GetMoney do
             for i,v in pairs(game:GetService("Workspace").Tycoons:GetDescendants()) do
