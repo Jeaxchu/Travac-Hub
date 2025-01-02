@@ -29,7 +29,7 @@ M:Toggle(
             _G.Collect = true
             while _G.Collect do
                 for i,v in pairs(game:GetService("Workspace").Coins:GetDescendants()) do
-                    if v:IsA"TouchTransmitter" and v.Parent.Name == "Coins" and v.Parent.Transparency == 1 then
+                    if v:IsA"TouchTransmitter" and v.Parent.Name == "Coins" and v.Parent.Transparency == 0 then
                         firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 0)
                         wait(0.3)
                         firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v.Parent, 1)
