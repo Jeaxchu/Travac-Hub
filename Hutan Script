@@ -1,0 +1,26 @@
+local player = game.Players.LocalPlayer
+local char = player.Character or player.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+local UIS = game:GetService("UserInputService")
+
+local running = false -- toggle state
+
+local function collectCoins()
+    for _, v in pairs(workspace.Coins:GetDescendants()) do
+        if not running then break end -- stop if toggled off
+        if v:IsA("TouchTransmitter") and v.Parent.Name == "Coins" or v.Parent.Name == "Coins Cave" and v.Parent.Transparency == 0 then
+            hrp.CFrame = v.Parent.CFrame
+            task.wait(0.3)
+        end
+    end
+end
+
+UIS.InputBegan:Connect(function(input, gameProcessed)
+    if gameProcessed then return end
+    if input.KeyCode == Enum.KeyCode.E then
+        running = not running -- toggle on/off
+        if running then
+            collectCoins()
+        end
+    end
+end)
